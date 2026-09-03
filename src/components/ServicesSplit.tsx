@@ -1,0 +1,294 @@
+import { useState } from 'react';
+import { ArrowRight, Check, Home, Building2, ChevronRight, X } from 'lucide-react';
+import { SERVICES } from '../data/roofingData';
+
+interface ServicesSplitProps {
+  onOpenQuoteModal: () => void;
+}
+
+export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  return (
+    <section id="services" className="bg-[#f8f9fa] text-stone-900 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Quality Above All Section matching screenshot */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 font-['Syne',sans-serif] mb-4">
+            Quality{' '}
+            <span className="relative inline-block">
+              <span className="relative z-10">Above All</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-lime-400 -z-0 rounded-sm"></span>
+            </span>
+          </h2>
+
+          <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
+            SH Metal Roofers is a local, family-owned business in St. Albans with extensive experience in Colorbond® metal roofing, guttering, tile-to-tin conversions, skylights, and storm damage rectification.
+          </p>
+        </div>
+
+        {/* Split Cards: Residential & Commercial matching screenshot */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+          {/* Residential Card */}
+          <div
+            id="card-residential"
+            className="group relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+              alt="Residential metal roofing in St Albans"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
+
+            <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
+              {/* Top pill */}
+              <div className="flex justify-between items-start">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider border border-white/10">
+                  <Home className="w-3.5 h-3.5 text-lime-400" />
+                  Domestic Specialists
+                </span>
+                <span className="text-white/80 text-xs font-mono bg-black/40 px-2 py-0.5 rounded">
+                  Tile-to-Tin &amp; Colorbond®
+                </span>
+              </div>
+
+              {/* Bottom Content */}
+              <div className="space-y-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Syne',sans-serif]">
+                  Residential
+                </h3>
+                <p className="text-stone-300 text-sm sm:text-base line-clamp-3 leading-relaxed">
+                  Expert reroofs, guttering, Velux skylights, tile-to-tin conversions, and leak repairs to protect and enhance your home with lasting BlueScope® steel.
+                </p>
+                <div className="pt-2">
+                  <button
+                    onClick={() => setSelectedService('residential')}
+                    className="inline-flex items-center gap-2 text-lime-400 font-bold text-sm tracking-wider uppercase group-hover:text-lime-300 transition-colors"
+                  >
+                    <span className="border-b-2 border-lime-400 pb-0.5">LEARN MORE</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Commercial Card */}
+          <div
+            id="card-commercial"
+            className="group relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
+              alt="Commercial metal roofing and wall cladding in Melbourne"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
+
+            <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
+              {/* Top pill */}
+              <div className="flex justify-between items-start">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider border border-white/10">
+                  <Building2 className="w-3.5 h-3.5 text-lime-400" />
+                  Industrial &amp; Builders
+                </span>
+                <span className="text-white/80 text-xs font-mono bg-black/40 px-2 py-0.5 rounded">
+                  Klip-Lok &amp; Cladding
+                </span>
+              </div>
+
+              {/* Bottom Content */}
+              <div className="space-y-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Syne',sans-serif]">
+                  Commercial
+                </h3>
+                <p className="text-stone-300 text-sm sm:text-base line-clamp-3 leading-relaxed">
+                  Specialist roofing, architectural standing seam wall cladding, factory reroofing, and compliance works for builders, property managers, and body corporates.
+                </p>
+                <div className="pt-2">
+                  <button
+                    onClick={() => setSelectedService('commercial')}
+                    className="inline-flex items-center gap-2 text-lime-400 font-bold text-sm tracking-wider uppercase group-hover:text-lime-300 transition-colors"
+                  >
+                    <span className="border-b-2 border-lime-400 pb-0.5">LEARN MORE</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Service Grid */}
+        <div className="border-t border-stone-200 pt-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="text-xs font-bold text-stone-500 uppercase tracking-widest">
+                Our Complete Scope of Works
+              </span>
+              <h3 className="text-2xl font-bold text-stone-900 font-['Syne',sans-serif]">
+                Full Victorian Roof Plumbing Services
+              </h3>
+            </div>
+            <button
+              onClick={onOpenQuoteModal}
+              className="inline-flex items-center gap-2 text-sm font-bold text-stone-900 hover:text-lime-600 transition-colors"
+            >
+              <span>Request custom quote</span>
+              <ChevronRight className="w-4 h-4 text-lime-500" />
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.map((srv) => (
+              <div
+                key={srv.id}
+                className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:border-lime-400 hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-lg bg-stone-900 text-lime-400 flex items-center justify-center font-bold text-base mb-4">
+                    ✓
+                  </div>
+                  <h4 className="text-lg font-bold text-stone-900 mb-2">
+                    {srv.title}
+                  </h4>
+                  <p className="text-sm text-stone-600 mb-4 leading-relaxed">
+                    {srv.shortDesc}
+                  </p>
+                  <ul className="space-y-1.5 mb-6 text-xs text-stone-700">
+                    {srv.highlights.map((h, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-lime-600 shrink-0" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button
+                  onClick={onOpenQuoteModal}
+                  className="w-full py-2 px-3 rounded bg-stone-100 hover:bg-lime-400 hover:text-stone-950 text-stone-900 text-xs font-bold transition-colors text-center"
+                >
+                  Book Assessment For This Service
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Modal for Service Deep Dive */}
+      {selectedService && (
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 text-stone-900 relative shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <button
+              onClick={() => setSelectedService(null)}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-stone-100 text-stone-500"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {selectedService === 'residential' ? (
+              <div className="space-y-4">
+                <div className="inline-block px-3 py-1 bg-lime-100 text-lime-800 text-xs font-bold rounded-full">
+                  RESIDENTIAL DIVISION
+                </div>
+                <h3 className="text-2xl font-bold font-['Syne',sans-serif]">
+                  Residential Metal Roofing in St. Albans &amp; Melbourne
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Australian homes face harsh UV extremes, sudden freezing hail, and torrential downpours. Our residential roofing team specialises in stripping old brittle tiles and replacing them with premium 0.42 BMT or 0.48 BMT BlueScope Colorbond® steel.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm">
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Tile to Tin Conversions</strong>
+                    <span className="text-xs text-stone-600">Lightweight Colorbond Custom Orb with anti-condensation blanket.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Continuous Gutters</strong>
+                    <span className="text-xs text-stone-600">Fascia covers, square-line &amp; quad gutters with leaf screening.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Velux Skylights</strong>
+                    <span className="text-xs text-stone-600">Double glazed roof windows with bespoke watertight apron flashings.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Emergency Leak Repairs</strong>
+                    <span className="text-xs text-stone-600">Fast tarping and permanent roof plumbing rectification.</span>
+                  </div>
+                </div>
+                <div className="pt-4 flex gap-3">
+                  <button
+                    onClick={() => {
+                      setSelectedService(null);
+                      onOpenQuoteModal();
+                    }}
+                    className="flex-1 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm"
+                  >
+                    Get a Residential Quote
+                  </button>
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="px-5 py-3 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-sm"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="inline-block px-3 py-1 bg-stone-900 text-lime-400 text-xs font-bold rounded-full">
+                  COMMERCIAL DIVISION
+                </div>
+                <h3 className="text-2xl font-bold font-['Syne',sans-serif]">
+                  Commercial Metal Roofing &amp; Architectural Cladding
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  We partner with Victoria's builders, commercial landlords, and strata corporations for complex large-scale roofing solutions. From Klip-Lok warehouse decks to standing seam wall claddings and massive stormwater box gutters.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm">
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Klip-Lok Industrial Decking</strong>
+                    <span className="text-xs text-stone-600">Concealed-fix roofing engineered for low pitch factory applications.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Architectural Cladding</strong>
+                    <span className="text-xs text-stone-600">Interlocking panels &amp; standing seam facades for modern developments.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Commercial Box Gutters</strong>
+                    <span className="text-xs text-stone-600">Custom welded stainless sumps &amp; overflow compliance systems.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">VBA Certified Work</strong>
+                    <span className="text-xs text-stone-600">Full compliance certificates and safety swms documentation.</span>
+                  </div>
+                </div>
+                <div className="pt-4 flex gap-3">
+                  <button
+                    onClick={() => {
+                      setSelectedService(null);
+                      onOpenQuoteModal();
+                    }}
+                    className="flex-1 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm"
+                  >
+                    Request Commercial Tender / Quote
+                  </button>
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="px-5 py-3 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-sm"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
