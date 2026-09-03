@@ -1,11 +1,12 @@
 import { Review, Project, Article, ColorbondSwatch } from '../types';
 
 export const BUSINESS_INFO = {
-  name: "SH Metal Roofers",
+  name: "Safe Hire Metal Roofing",
+  shortName: "Safe Hire",
   tagline: "Quality Above All",
   phone: "0403 652 357",
   phoneRaw: "0403652357",
-  email: "info@shmetalroofers.com.au",
+  email: "info@safehiremetalroofing.com.au",
   address: "78 Perrett Ave, St Albans VIC 3021",
   suburb: "St Albans",
   state: "VIC",
@@ -167,7 +168,7 @@ export const ARTICLES: Article[] = [
     content: [
       "In Victoria, converting a roof from heavy tile to lightweight metal sheeting (such as Colorbond® steel) is considered an alteration to the roof cladding. Because metal roofing significantly reduces structural dead-load (from ~60kg/m² to around 5kg/m²), it generally does not require a building permit provided the underlying trusses and rafters are inspected and verified sound.",
       "However, any roofing plumbing works exceeding $750 in value MUST be certified by a VBA (Victorian Building Authority) licensed roof plumber with a Compliance Certificate and 6-year insurance guarantee.",
-      "SH Metal Roofers handles full compliance assessments, structural tie-downs, and issues the official VBA Compliance Certificate immediately upon job completion."
+      "Safe Hire Metal Roofing handles full compliance assessments, structural tie-downs, and issues the official VBA Compliance Certificate immediately upon job completion."
     ]
   },
   {

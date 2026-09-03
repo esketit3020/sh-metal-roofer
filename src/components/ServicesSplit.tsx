@@ -13,17 +13,21 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
     <section id="services" className="bg-[#f8f9fa] text-stone-900 py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Quality Above All Section matching screenshot */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 font-['Syne',sans-serif] mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold border border-red-100">
+            <span>Our Core Standard</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal text-stone-900">
             Quality{' '}
             <span className="relative inline-block">
               <span className="relative z-10">Above All</span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-lime-400 -z-0 rounded-sm"></span>
+              <span className="absolute bottom-1 left-0 w-full h-2.5 bg-red-600/20 -z-0 rounded-sm"></span>
             </span>
           </h2>
 
-          <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
-            SH Metal Roofers is a local, family-owned business in St. Albans with extensive experience in Colorbond® metal roofing, guttering, tile-to-tin conversions, skylights, and storm damage rectification.
+          <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+            Safe Hire Metal Roofing is a local, family-owned business in St. Albans with extensive experience in Colorbond® metal roofing, guttering, tile-to-tin conversions, skylights, and storm damage rectification.
           </p>
         </div>
 
@@ -45,8 +49,8 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
             <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
               {/* Top pill */}
               <div className="flex justify-between items-start">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider border border-white/10">
-                  <Home className="w-3.5 h-3.5 text-lime-400" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wide border border-white/10">
+                  <Home className="w-3.5 h-3.5 text-red-500" />
                   Domestic Specialists
                 </span>
                 <span className="text-white/80 text-xs font-mono bg-black/40 px-2 py-0.5 rounded">
@@ -56,7 +60,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
 
               {/* Bottom Content */}
               <div className="space-y-3">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Syne',sans-serif]">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
                   Residential
                 </h3>
                 <p className="text-stone-300 text-sm sm:text-base line-clamp-3 leading-relaxed">
@@ -65,9 +69,9 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                 <div className="pt-2">
                   <button
                     onClick={() => setSelectedService('residential')}
-                    className="inline-flex items-center gap-2 text-lime-400 font-bold text-sm tracking-wider uppercase group-hover:text-lime-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-red-400 font-bold text-sm tracking-wider uppercase group-hover:text-red-300 transition-colors"
                   >
-                    <span className="border-b-2 border-lime-400 pb-0.5">LEARN MORE</span>
+                    <span className="border-b-2 border-red-500 pb-0.5">LEARN MORE</span>
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -91,8 +95,8 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
             <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
               {/* Top pill */}
               <div className="flex justify-between items-start">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider border border-white/10">
-                  <Building2 className="w-3.5 h-3.5 text-lime-400" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wide border border-white/10">
+                  <Building2 className="w-3.5 h-3.5 text-red-500" />
                   Industrial &amp; Builders
                 </span>
                 <span className="text-white/80 text-xs font-mono bg-black/40 px-2 py-0.5 rounded">
@@ -102,7 +106,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
 
               {/* Bottom Content */}
               <div className="space-y-3">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Syne',sans-serif]">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
                   Commercial
                 </h3>
                 <p className="text-stone-300 text-sm sm:text-base line-clamp-3 leading-relaxed">
@@ -111,9 +115,9 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                 <div className="pt-2">
                   <button
                     onClick={() => setSelectedService('commercial')}
-                    className="inline-flex items-center gap-2 text-lime-400 font-bold text-sm tracking-wider uppercase group-hover:text-lime-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-red-400 font-bold text-sm tracking-wide uppercase group-hover:text-red-300 transition-colors"
                   >
-                    <span className="border-b-2 border-lime-400 pb-0.5">LEARN MORE</span>
+                    <span className="border-b-2 border-red-500 pb-0.5">LEARN MORE</span>
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -126,19 +130,19 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
         <div className="border-t border-stone-200 pt-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
-              <span className="text-xs font-bold text-stone-500 uppercase tracking-widest">
+              <span className="text-xs font-bold text-stone-500 uppercase tracking-wide">
                 Our Complete Scope of Works
               </span>
-              <h3 className="text-2xl font-bold text-stone-900 font-['Syne',sans-serif]">
+              <h3 className="text-2xl font-bold text-stone-900">
                 Full Victorian Roof Plumbing Services
               </h3>
             </div>
             <button
               onClick={onOpenQuoteModal}
-              className="inline-flex items-center gap-2 text-sm font-bold text-stone-900 hover:text-lime-600 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold text-stone-900 hover:text-red-600 transition-colors"
             >
               <span>Request custom quote</span>
-              <ChevronRight className="w-4 h-4 text-lime-500" />
+              <ChevronRight className="w-4 h-4 text-red-600" />
             </button>
           </div>
 
@@ -146,10 +150,10 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
             {SERVICES.map((srv) => (
               <div
                 key={srv.id}
-                className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:border-lime-400 hover:shadow-md transition-all flex flex-col justify-between"
+                className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:border-red-500/40 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-lg bg-stone-900 text-lime-400 flex items-center justify-center font-bold text-base mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-stone-900 text-red-500 flex items-center justify-center font-bold text-base mb-4">
                     ✓
                   </div>
                   <h4 className="text-lg font-bold text-stone-900 mb-2">
@@ -161,7 +165,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   <ul className="space-y-1.5 mb-6 text-xs text-stone-700">
                     {srv.highlights.map((h, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-lime-600 shrink-0" />
+                        <Check className="w-3.5 h-3.5 text-red-600 shrink-0" />
                         <span>{h}</span>
                       </li>
                     ))}
@@ -170,7 +174,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
 
                 <button
                   onClick={onOpenQuoteModal}
-                  className="w-full py-2 px-3 rounded bg-stone-100 hover:bg-lime-400 hover:text-stone-950 text-stone-900 text-xs font-bold transition-colors text-center"
+                  className="w-full py-2 px-3 rounded bg-stone-100 hover:bg-[#C81D25] hover:text-white text-stone-900 text-xs font-bold transition-colors text-center"
                 >
                   Book Assessment For This Service
                 </button>
@@ -193,10 +197,10 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
 
             {selectedService === 'residential' ? (
               <div className="space-y-4">
-                <div className="inline-block px-3 py-1 bg-lime-100 text-lime-800 text-xs font-bold rounded-full">
+                <div className="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-bold rounded-full border border-red-100">
                   RESIDENTIAL DIVISION
                 </div>
-                <h3 className="text-2xl font-bold font-['Syne',sans-serif]">
+                <h3 className="text-2xl font-bold">
                   Residential Metal Roofing in St. Albans &amp; Melbourne
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -226,7 +230,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                       setSelectedService(null);
                       onOpenQuoteModal();
                     }}
-                    className="flex-1 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm"
+                    className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors"
                   >
                     Get a Residential Quote
                   </button>
@@ -240,10 +244,10 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
               </div>
             ) : (
               <div className="space-y-4">
-                <div className="inline-block px-3 py-1 bg-stone-900 text-lime-400 text-xs font-bold rounded-full">
+                <div className="inline-block px-3 py-1 bg-stone-900 text-red-400 text-xs font-bold rounded-full border border-stone-700">
                   COMMERCIAL DIVISION
                 </div>
-                <h3 className="text-2xl font-bold font-['Syne',sans-serif]">
+                <h3 className="text-2xl font-bold">
                   Commercial Metal Roofing &amp; Architectural Cladding
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -273,7 +277,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                       setSelectedService(null);
                       onOpenQuoteModal();
                     }}
-                    className="flex-1 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm"
+                    className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors"
                   >
                     Request Commercial Tender / Quote
                   </button>

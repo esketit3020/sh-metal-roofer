@@ -46,14 +46,14 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
     <section id="calculator" className="bg-[#f4f5f7] text-stone-900 py-16 lg:py-24 border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 text-stone-700 text-xs font-bold uppercase tracking-wider mb-3">
-            <Calculator className="w-3.5 h-3.5 text-lime-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-200 text-stone-700 text-xs font-semibold mb-3">
+            <Calculator className="w-3.5 h-3.5 text-red-600" />
             Transparent Victorian Pricing
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 font-['Syne',sans-serif]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal text-stone-900">
             Instant Roof Cost Estimator &amp; Colorbond® Visualizer
           </h2>
-          <p className="text-stone-600 text-sm sm:text-base mt-2">
+          <p className="text-stone-600 text-xs sm:text-sm mt-2">
             Calculate a realistic ballpark estimate for your St. Albans or Melbourne home in under 30 seconds.
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                     <span>{item.label}</span>
                     <span
                       className={`text-[10px] font-normal mt-1 ${
-                        serviceType === item.id ? 'text-lime-400' : 'text-stone-500'
+                        serviceType === item.id ? 'text-red-400' : 'text-stone-500'
                       }`}
                     >
                       {item.tag}
@@ -113,7 +113,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                 step="10"
                 value={roofSize}
                 onChange={(e) => setRoofSize(Number(e.target.value))}
-                className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-lime-500"
+                className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-red-600"
               />
               <div className="flex justify-between text-xs text-stone-400 mt-1 font-mono">
                 <span>Unit/Townhouse (80m²)</span>
@@ -140,7 +140,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                     onClick={() => setSelectedColour(swatch)}
                     className={`group relative p-2 rounded-xl border flex flex-col items-center gap-1.5 transition-all ${
                       selectedColour.name === swatch.name
-                        ? 'border-stone-900 ring-2 ring-lime-400 bg-stone-50'
+                        ? 'border-stone-900 ring-2 ring-red-500 bg-stone-50'
                         : 'border-stone-200 hover:border-stone-400 bg-white'
                     }`}
                     title={`${swatch.name}: ${swatch.description}`}
@@ -165,7 +165,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
           <div className="lg:col-span-5 bg-stone-950 text-white rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-inner">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-stone-800">
-                <span className="text-xs uppercase tracking-widest text-lime-400 font-bold">
+                <span className="text-xs uppercase tracking-wide text-red-400 font-bold">
                   Ballpark Estimate
                 </span>
                 <span className="text-xs text-stone-400">Melbourne VIC</span>
@@ -173,7 +173,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
 
               <div className="my-6">
                 <div className="text-xs text-stone-400 mb-1">Estimated Project Range:</div>
-                <div className="text-3xl sm:text-4xl font-extrabold text-white font-['Syne',sans-serif] tracking-tight">
+                <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                   ${estimate.min.toLocaleString()} – ${estimate.max.toLocaleString()}
                 </div>
                 <div className="text-xs text-stone-400 mt-1">
@@ -203,7 +203,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                 </div>
                 <div className="flex justify-between">
                   <span className="text-stone-400">Estimated Duration:</span>
-                  <span className="font-semibold text-lime-400">3 – 5 Days</span>
+                  <span className="font-semibold text-red-400">3 – 5 Days</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-stone-400">BlueScope Warranty:</span>
@@ -217,7 +217,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
               <button
                 id="estimator-book-btn"
                 onClick={handleBookWithDetails}
-                className="w-full py-3.5 px-4 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-extrabold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-4 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-[0_4px_20px_rgba(200,29,37,0.3)] flex items-center justify-center gap-2"
               >
                 <span>BOOK FREE ON-SITE INSPECTION</span>
                 <ArrowRight className="w-4 h-4" />
@@ -240,10 +240,10 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                 <div className="w-16 h-16 rounded-2xl bg-orange-500 text-white flex items-center justify-center mb-4 shadow-md">
                   <CreditCard className="w-8 h-8" />
                 </div>
-                <div className="text-2xl font-extrabold tracking-tight text-stone-900 font-['Syne',sans-serif]">
+                <div className="text-2xl font-extrabold tracking-tight text-stone-900">
                   handypay
                 </div>
-                <span className="text-[11px] uppercase tracking-widest text-orange-600 font-bold mt-0.5">
+                <span className="text-[11px] uppercase tracking-wide text-orange-600 font-bold mt-0.5">
                   Roofing Finance Partner
                 </span>
                 <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-stone-700 bg-white px-3 py-1.5 rounded-full border border-stone-200">
@@ -255,7 +255,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
 
             {/* Right Copy: Flexible Payment Options with Handypay */}
             <div className="md:col-span-7 space-y-4">
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-950 font-['Syne',sans-serif]">
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-950">
                 Flexible Payment Options with Handypay
               </h3>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
@@ -265,7 +265,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                 <button
                   id="handypay-learn-btn"
                   onClick={() => setShowFinanceModal(true)}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-xs sm:text-sm tracking-wider uppercase transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-xs sm:text-sm tracking-wide uppercase transition-colors"
                 >
                   <span>LEARN MORE</span>
                   <ArrowRight className="w-4 h-4" />
@@ -287,28 +287,28 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
       {showFinanceModal && (
         <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 text-stone-900 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
-            <h3 className="text-2xl font-bold font-['Syne',sans-serif]">
+            <h3 className="text-2xl font-bold">
               Roofing Finance with Handypay
             </h3>
             <p className="text-stone-600 text-sm leading-relaxed">
-              SH Metal Roofers partners with Handypay to provide Australian homeowners with stress-free financing for new roofs, guttering, and storm repairs.
+              Safe Hire Metal Roofing partners with Handypay to provide Australian homeowners with stress-free financing for new roofs, guttering, and storm repairs.
             </p>
 
             <ul className="space-y-2.5 text-sm text-stone-700">
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-lime-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <span>Borrow from $2,000 up to $75,000 for residential roofing</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-lime-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <span>Terms from 1 to 7 years with no early exit penalties</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-lime-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <span>100% online application with fast same-day approval</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-lime-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <span>No home equity or property valuation needed</span>
               </li>
             </ul>
@@ -319,7 +319,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                   setShowFinanceModal(false);
                   onOpenQuoteModal({ service: 'Finance Application' });
                 }}
-                className="flex-1 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm"
+                className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm"
               >
                 Inquire About Finance Quote
               </button>

@@ -14,17 +14,22 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Heading, description, 4 check bullets, button */}
-          <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-950 font-['Syne',sans-serif] leading-[1.15]">
+          <div className="lg:col-span-6 space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold border border-red-100">
+              <ShieldCheck className="w-3.5 h-3.5 text-red-600" />
+              <span>Licensed Roof Plumber #104829</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal text-stone-950 leading-snug">
               Trusted Roofing Experts for{' '}
               <span className="relative inline-block">
                 <span className="relative z-10">Over 15 Years</span>
-                <span className="absolute bottom-1 left-0 w-full h-3 bg-lime-400 -z-0 rounded-sm"></span>
+                <span className="absolute bottom-1 left-0 w-full h-2.5 bg-red-600/20 -z-0 rounded-sm"></span>
               </span>
             </h2>
 
-            <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
-              Family-owned, VBA-licensed, and BlueScope Colorbond® certified. Based in St. Albans, SH Metal Roofers delivers premium reroofing, tile-to-tin conversions, continuous guttering, and rectification roofing projects that Melbourne homeowners and builders rely on.
+            <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+              Family-owned, VBA-licensed, and BlueScope Colorbond® certified. Based in St. Albans, Safe Hire Metal Roofing delivers premium reroofing, tile-to-tin conversions, continuous guttering, and rectification roofing projects that Melbourne homeowners and builders rely on.
             </p>
 
             {/* 4 Checkmark Cards matching the exact layout in the screenshot */}
@@ -75,9 +80,9 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
               <button
                 id="about-sh-btn"
                 onClick={() => setAboutModalOpen(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-extrabold text-sm tracking-wide transition-all shadow-sm transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-md transform hover:-translate-y-0.5"
               >
-                <span>ABOUT SH METAL ROOFERS</span>
+                <span>ABOUT SAFE HIRE METAL ROOFING</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -88,7 +93,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {/* Tile 1: Master Plumbers / VBA / Authorised Badges */}
               <div className="bg-[#f2f4f7] rounded-xl p-5 flex flex-col justify-center items-center text-center border border-stone-200 shadow-sm aspect-[4/3]">
-                <div className="w-12 h-12 rounded-full bg-stone-900 text-lime-400 flex items-center justify-center mb-3">
+                <div className="w-12 h-12 rounded-full bg-stone-900 text-red-500 flex items-center justify-center mb-3">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <span className="font-extrabold text-sm text-stone-900 tracking-tight">VBA LICENSED</span>
@@ -143,7 +148,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
               <span>•</span>
               <span>Velux Certified Installer</span>
               <span>•</span>
-              <span className="text-lime-700 font-bold">$20M Public Liability</span>
+              <span className="text-red-700 font-bold">$20M Public Liability</span>
             </div>
           </div>
         </div>
@@ -161,25 +166,25 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
             </button>
 
             <div className="space-y-4">
-              <div className="inline-block px-3 py-1 bg-lime-100 text-lime-800 text-xs font-bold rounded-full">
+              <div className="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-bold rounded-full border border-red-100">
                 OUR STORY &amp; STANDARDS
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold font-['Syne',sans-serif]">
-                About SH Metal Roofers – St. Albans, Victoria
+              <h3 className="text-2xl sm:text-3xl font-bold">
+                About Safe Hire Metal Roofing – St. Albans, Victoria
               </h3>
 
               <p className="text-stone-600 text-sm leading-relaxed">
-                Operating out of <strong>78 Perrett Ave, St Albans VIC 3021</strong>, SH Metal Roofers was founded with one clear guiding philosophy: <em>Quality Above All</em>. Where big sales franchises subcontract to unverified labourers, our licensed roof plumbers are personally on your roof from start to finish.
+                Operating out of <strong>78 Perrett Ave, St Albans VIC 3021</strong>, Safe Hire Metal Roofing was founded with one clear guiding philosophy: <em>Quality Above All</em>. Where big sales franchises subcontract to unverified labourers, our licensed roof plumbers are personally on your roof from start to finish.
               </p>
 
-              <div className="border-l-4 border-lime-400 pl-4 py-2 bg-stone-50 rounded-r-lg text-sm text-stone-700 italic">
+              <div className="border-l-4 border-red-600 pl-4 py-2 bg-stone-50 rounded-r-lg text-sm text-stone-700 italic">
                 “A roof is the most critical protective barrier of your home. We treat every St. Albans and Melbourne roof as if it were sheltering our own family.”
               </div>
 
               <div className="space-y-3 pt-2 text-sm text-stone-700">
                 <div className="flex gap-3">
-                  <div className="w-6 h-6 rounded bg-lime-400 text-stone-950 font-bold flex items-center justify-center shrink-0 text-xs">
+                  <div className="w-6 h-6 rounded bg-red-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">
                     1
                   </div>
                   <div>
@@ -189,7 +194,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                 </div>
 
                 <div className="flex gap-3">
-                  <div className="w-6 h-6 rounded bg-lime-400 text-stone-950 font-bold flex items-center justify-center shrink-0 text-xs">
+                  <div className="w-6 h-6 rounded bg-red-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">
                     2
                   </div>
                   <div>
@@ -199,7 +204,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                 </div>
 
                 <div className="flex gap-3">
-                  <div className="w-6 h-6 rounded bg-lime-400 text-stone-950 font-bold flex items-center justify-center shrink-0 text-xs">
+                  <div className="w-6 h-6 rounded bg-red-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">
                     3
                   </div>
                   <div>
@@ -215,7 +220,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                     setAboutModalOpen(false);
                     onOpenQuoteModal();
                   }}
-                  className="flex-1 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm"
+                  className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors"
                 >
                   Book Free On-Site Inspection
                 </button>

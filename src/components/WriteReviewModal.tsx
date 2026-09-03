@@ -59,15 +59,15 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
             <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold font-['Syne',sans-serif]">
+            <h3 className="text-2xl font-bold">
               Review Submitted!
             </h3>
             <p className="text-stone-600 text-sm">
-              Thank you for reviewing SH Metal Roofers! Your feedback has been posted and will help fellow Victorian homeowners choose reliable metal roofing.
+              Thank you for reviewing Safe Hire Metal Roofing! Your feedback has been posted and will help fellow Victorian homeowners choose reliable metal roofing.
             </p>
             <button
               onClick={handleDone}
-              className="mt-4 px-6 py-2.5 rounded-lg bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm"
+              className="mt-4 px-6 py-2.5 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm"
             >
               Close
             </button>
@@ -78,11 +78,11 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
               <span className="w-6 h-6 rounded-full bg-stone-100 border border-stone-200 font-bold text-blue-600 text-xs flex items-center justify-center">
                 G
               </span>
-              <span className="text-xs uppercase font-bold text-stone-500 tracking-wider">
-                Google Reviews • SH Metal Roofers
+              <span className="text-xs uppercase font-bold text-stone-500 tracking-wide">
+                Google Reviews • Safe Hire Metal Roofing
               </span>
             </div>
-            <h3 className="text-2xl font-extrabold text-stone-950 font-['Syne',sans-serif]">
+            <h3 className="text-2xl font-extrabold text-stone-950">
               Write a Review
             </h3>
             <p className="text-xs text-stone-500 mb-5">
@@ -129,7 +129,7 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
                     placeholder="e.g. Rachel Adams"
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                    className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   />
                 </div>
 
@@ -142,7 +142,7 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
                     placeholder="e.g. St Albans, VIC"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                    className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   />
                 </div>
               </div>
@@ -154,7 +154,7 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
                 <select
                   value={serviceType}
                   onChange={(e) => setServiceType(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                  className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                 >
                   <option value="Tile to Tin Conversion">Tile to Tin Conversion</option>
                   <option value="Colorbond Reroofing">Colorbond Reroofing</option>
@@ -175,14 +175,14 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
                   placeholder="Describe the punctuality, roof quality, cleanup, and communication..."
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                  className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-extrabold text-sm tracking-wide transition-all shadow-sm"
+                  className="w-full py-3 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-sm"
                 >
                   POST REVIEW
                 </button>

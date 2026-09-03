@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, Menu, X, ArrowRight, ShieldCheck, Wrench, Sparkles, ChevronDown } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/roofingData';
+import { SafeHireLogo } from './SafeHireLogo';
 
 interface HeaderProps {
   onOpenQuoteModal: () => void;
@@ -14,67 +15,31 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
     <header className="sticky top-0 z-40 bg-[#111315] text-white border-b border-stone-800/80 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Brand Logo matching Roofrite style in screenshot */}
-          <a href="#" className="flex items-center gap-3 group">
-            {/* Geometric Roof Icon */}
-            <div className="relative w-10 h-10 flex items-center justify-center">
-              <svg viewBox="0 0 40 40" className="w-10 h-10 text-lime-400" fill="none">
-                {/* Pitched metal roof silhouette */}
-                <path
-                  d="M4 26L20 9L36 26"
-                  stroke="currentColor"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M12 26L20 17.5L28 26"
-                  stroke="#ffffff"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <circle cx="20" cy="7" r="2.5" fill="#a3e635" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl font-extrabold tracking-tight text-white font-['Syne',sans-serif] uppercase">
-                  SH Metal
-                </span>
-                <span className="text-xl font-extrabold tracking-tight text-lime-400 font-['Syne',sans-serif] uppercase">
-                  Roofers
-                </span>
-              </div>
-              <span className="text-[10px] tracking-widest text-stone-400 uppercase font-semibold">
-                St. Albans, Victoria • Quality Above All
-              </span>
-            </div>
+          {/* Brand Logo with exact uploaded Safe Hire Metal Roofing insignia */}
+          <a href="#" className="flex items-center gap-3 group focus:outline-none" aria-label="Safe Hire Metal Roofing Home">
+            <SafeHireLogo variant="horizontal" theme="dark" size="md" />
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-stone-300">
-            <a href="#why-us" className="hover:text-lime-400 transition-colors">
-              Why SH Metal
-            </a>
-
             {/* Dropdown for services */}
-            <div className="relative group">
+            <div className="relative group flex items-center h-10">
               <button
+                type="button"
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className="flex items-center gap-1 hover:text-lime-400 transition-colors py-2"
+                className="inline-flex items-center gap-1.5 h-10 hover:text-red-500 transition-colors focus:outline-none cursor-pointer"
               >
                 <span>Services</span>
-                <ChevronDown className="w-4 h-4 text-stone-400 group-hover:text-lime-400 transition-transform group-hover:rotate-180" />
+                <ChevronDown className="w-4 h-4 text-stone-400 group-hover:text-red-500 transition-transform group-hover:rotate-180" />
               </button>
 
-              <div className="absolute top-full left-0 w-64 pt-2 hidden group-hover:block transition-all">
+              <div className="absolute top-full left-0 w-64 pt-2 hidden group-hover:block transition-all z-50">
                 <div className="bg-[#181a1f] border border-stone-800 rounded-xl p-2 shadow-2xl space-y-1">
                   <a
                     href="#tile-to-tin"
                     className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-stone-800/80 transition-colors"
                   >
-                    <Sparkles className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
+                    <Sparkles className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
                       <div className="text-sm font-semibold text-white">Tile to Tin Conversion</div>
                       <div className="text-xs text-stone-400">Replace old tiles with Colorbond</div>
@@ -84,7 +49,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                     href="#residential"
                     className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-stone-800/80 transition-colors"
                   >
-                    <Wrench className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
+                    <Wrench className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
                       <div className="text-sm font-semibold text-white">Residential Metal Reroofs</div>
                       <div className="text-xs text-stone-400">Corrugated &amp; standing seam</div>
@@ -94,7 +59,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                     href="#commercial"
                     className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-stone-800/80 transition-colors"
                   >
-                    <ShieldCheck className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
+                    <ShieldCheck className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
                       <div className="text-sm font-semibold text-white">Commercial &amp; Cladding</div>
                       <div className="text-xs text-stone-400">Box gutters, factories &amp; wall cladding</div>
@@ -104,33 +69,42 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
               </div>
             </div>
 
-            <a href="#projects" className="hover:text-lime-400 transition-colors">
+            <a
+              href="#projects"
+              className="inline-flex items-center h-10 hover:text-red-500 transition-colors"
+            >
               Projects
             </a>
-            <a href="#reviews" className="hover:text-lime-400 transition-colors">
+            <a
+              href="#reviews"
+              className="inline-flex items-center h-10 hover:text-red-500 transition-colors"
+            >
               Google Reviews
             </a>
-            <a href="#contact" className="hover:text-lime-400 transition-colors">
-              Directions &amp; Contact
+            <a
+              href="#contact"
+              className="inline-flex items-center h-10 hover:text-red-500 transition-colors"
+            >
+              Contact
             </a>
           </nav>
 
-          {/* Right Action: Phone + Lime Green Button matching screenshot */}
+          {/* Right Action: Phone + Crimson Red Button matching brand */}
           <div className="hidden sm:flex items-center gap-5">
             <a
               id="header-phone-link"
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center gap-2 text-white hover:text-lime-400 transition-colors font-semibold text-base"
+              className="flex items-center gap-2 text-white hover:text-red-400 transition-colors font-semibold text-base"
               title="Call contractor"
             >
-              <Phone className="w-4 h-4 text-lime-400 fill-lime-400" />
+              <Phone className="w-4 h-4 text-red-500 fill-red-500" />
               <span>{BUSINESS_INFO.phone}</span>
             </a>
 
             <button
               id="header-quote-btn"
               onClick={onOpenQuoteModal}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:shadow-[0_0_25px_rgba(163,230,53,0.5)] transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(200,29,37,0.35)] hover:shadow-[0_0_25px_rgba(200,29,37,0.55)] transform hover:-translate-y-0.5"
             >
               <span>BOOK A FREE QUOTE</span>
               <ArrowRight className="w-4 h-4" />
@@ -141,7 +115,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
           <div className="flex sm:hidden items-center gap-2">
             <button
               onClick={onOpenQuoteModal}
-              className="px-3 py-1.5 rounded bg-lime-400 text-stone-950 font-bold text-xs"
+              className="px-3 py-1.5 rounded bg-[#C81D25] text-white font-bold text-xs"
             >
               FREE QUOTE
             </button>
@@ -159,55 +133,69 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
       {/* Mobile drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#16181d] border-b border-stone-800 px-4 pt-3 pb-6 space-y-3">
-          <div className="flex flex-col space-y-2.5 text-base font-medium">
-            <a
-              href="#why-us"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
-            >
-              Why SH Metal Roofers
-            </a>
-            <a
-              href="#tile-to-tin"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
-            >
-              Tile to Tin Conversions
-            </a>
-            <a
-              href="#residential"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
-            >
-              Residential Metal Reroofing
-            </a>
-            <a
-              href="#commercial"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
-            >
-              Commercial Roofing &amp; Cladding
-            </a>
+          <div className="flex flex-col space-y-1.5 text-base font-medium">
+            {/* Mobile Services Section */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                className="w-full flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-stone-800 text-stone-200 transition-colors cursor-pointer"
+              >
+                <span>Services</span>
+                <ChevronDown
+                  className={`w-4 h-4 text-stone-400 transition-transform ${
+                    servicesDropdownOpen ? 'rotate-180 text-red-500' : ''
+                  }`}
+                />
+              </button>
+
+              {servicesDropdownOpen && (
+                <div className="pl-4 mt-1 space-y-1 border-l border-stone-700/60 ml-3">
+                  <a
+                    href="#tile-to-tin"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
+                  >
+                    Tile to Tin Conversions
+                  </a>
+                  <a
+                    href="#residential"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
+                  >
+                    Residential Metal Reroofing
+                  </a>
+                  <a
+                    href="#commercial"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
+                  >
+                    Commercial Roofing &amp; Cladding
+                  </a>
+                </div>
+              )}
+            </div>
+
             <a
               href="#projects"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
+              className="px-3 py-2.5 rounded-md hover:bg-stone-800 text-stone-200 transition-colors"
             >
-              Completed Projects
+              Projects
             </a>
             <a
               href="#reviews"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
+              className="px-3 py-2.5 rounded-md hover:bg-stone-800 text-stone-200 transition-colors"
             >
-              Google Reviews (4.4 ★)
+              Google Reviews
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md hover:bg-stone-800 text-stone-200"
+              className="px-3 py-2.5 rounded-md hover:bg-stone-800 text-stone-200 transition-colors"
             >
-              Directions (78 Perrett Ave, St Albans)
+              Contact
             </a>
           </div>
 
@@ -216,7 +204,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
               className="flex items-center justify-center gap-2 py-3 rounded-md bg-stone-800 text-white font-semibold"
             >
-              <Phone className="w-4 h-4 text-lime-400" />
+              <Phone className="w-4 h-4 text-red-500" />
               <span>Call {BUSINESS_INFO.phone}</span>
             </a>
             <button
@@ -224,7 +212,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                 setMobileMenuOpen(false);
                 onOpenQuoteModal();
               }}
-              className="flex items-center justify-center gap-2 py-3 rounded-md bg-lime-400 text-stone-950 font-bold"
+              className="flex items-center justify-center gap-2 py-3 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold"
             >
               <span>BOOK A FREE QUOTE</span>
               <ArrowRight className="w-4 h-4" />

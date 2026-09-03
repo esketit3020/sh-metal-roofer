@@ -12,17 +12,17 @@ export default function RoofingInsights() {
         {/* Header matching screenshot */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 font-['Syne',sans-serif]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal text-stone-900">
               Roofing Tips &amp; Insights
             </h2>
-            <p className="text-stone-600 text-sm sm:text-base mt-1.5 max-w-xl">
+            <p className="text-stone-600 text-xs sm:text-sm mt-1.5 max-w-xl">
               Expert advice, guides, and updates to help you protect and maintain your roof.
             </p>
           </div>
 
           <button
             onClick={() => setSelectedArticle(ARTICLES[0])}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-xs sm:text-sm tracking-wider uppercase transition-colors shrink-0 self-start sm:self-auto"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-xs sm:text-sm tracking-wide uppercase transition-colors shrink-0 self-start sm:self-auto"
           >
             <span>SEE ALL ARTICLES</span>
             <ArrowRight className="w-4 h-4" />
@@ -49,10 +49,10 @@ export default function RoofingInsights() {
                 </div>
 
                 <div className="p-5 sm:p-6 space-y-2.5">
-                  <div className="text-[11px] font-bold text-stone-400 uppercase tracking-widest">
+                  <div className="text-[11px] font-bold text-stone-400 uppercase tracking-wide">
                     {art.category}
                   </div>
-                  <h3 className="text-lg font-bold text-stone-900 leading-snug group-hover:text-lime-700 transition-colors">
+                  <h3 className="text-lg font-bold text-stone-900 leading-snug group-hover:text-[#C81D25] transition-colors">
                     {art.title}
                   </h3>
                   <p className="text-xs text-stone-600 line-clamp-3 leading-relaxed">
@@ -64,9 +64,9 @@ export default function RoofingInsights() {
               <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-0">
                 <button
                   onClick={() => setSelectedArticle(art)}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-stone-900 group-hover:text-lime-600 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-stone-900 group-hover:text-[#C81D25] transition-colors"
                 >
-                  <span className="border-b border-stone-300 pb-0.5 group-hover:border-lime-500">
+                  <span className="border-b border-stone-300 pb-0.5 group-hover:border-[#C81D25]">
                     READ MORE
                   </span>
                   <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
@@ -90,7 +90,7 @@ export default function RoofingInsights() {
             </button>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-xs font-bold text-lime-700 uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-xs font-bold text-red-700 uppercase tracking-wide">
                 <span>{selectedArticle.category}</span>
                 <span>•</span>
                 <span>{selectedArticle.readTime}</span>
@@ -98,7 +98,7 @@ export default function RoofingInsights() {
                 <span>{selectedArticle.date}</span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-stone-950 font-['Syne',sans-serif]">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-stone-950">
                 {selectedArticle.title}
               </h3>
 
@@ -118,7 +118,7 @@ export default function RoofingInsights() {
 
               <div className="pt-4 border-t border-stone-200 flex items-center justify-between">
                 <span className="text-xs text-stone-500">
-                  Written by SH Metal Roofers Technical Division (St Albans, VIC)
+                  Written by Safe Hire Metal Roofing Technical Division (St Albans, VIC)
                 </span>
                 <button
                   onClick={() => setSelectedArticle(null)}

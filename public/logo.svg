@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      .red-fill { fill: #C81D25; }
+      .red-stroke { stroke: #C81D25; }
+      .dark-fill { fill: #1E2229; }
+      .dark-stroke { stroke: #1E2229; }
+    </style>
+  </defs>
+
+  <!-- ==================== EMBLEM ==================== -->
+  <g id="emblem" transform="translate(0, 5)">
+    <!-- Outer Hexagonal Roof Ridge (Top gable & Right Side) -->
+    <path
+      d="M 250 52
+         L 378 126
+         L 378 266
+         L 258 335
+         L 250 340
+         L 242 335
+         L 122 266
+         L 122 126
+         Z"
+      fill="none"
+      stroke="#1E2229"
+      stroke-width="15"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+
+    <!-- Stylized RED 'S' (Left Side of Hexagon) -->
+    <!-- Top diagonal bar running along roof pitch, down left side, across center, down inner vertical, and along bottom left -->
+    <path
+      d="M 240 92
+         L 142 148
+         L 142 206
+         L 236 206
+         L 236 288
+         L 142 234
+         L 142 258
+         L 240 314
+         L 240 182
+         L 166 182
+         L 166 158
+         L 240 116
+         Z"
+      fill="#C81D25"
+    />
+
+    <!-- Stylized CHARCOAL 'H' (Right Side of Hexagon) -->
+    <!-- Inner vertical stem, crossbar, and outer stem connected to bottom point -->
+    <path
+      d="M 258 182
+         L 282 182
+         L 282 222
+         L 334 222
+         L 334 148
+         L 358 134
+         L 358 284
+         L 258 340
+         L 258 316
+         L 334 274
+         L 334 246
+         L 282 246
+         L 282 300
+         L 258 300
+         Z"
+      fill="#1E2229"
+    />
+
+    <!-- 4 Square Window Panes (2x2 Grid) -->
+    <g id="windows" fill="#1E2229">
+      <rect x="246" y="140" width="13" height="13" rx="1" />
+      <rect x="264" y="140" width="13" height="13" rx="1" />
+      <rect x="246" y="158" width="13" height="13" rx="1" />
+      <rect x="264" y="158" width="13" height="13" rx="1" />
+    </g>
+  </g>
+
+  <!-- ==================== TEXT: SAFE HIRE ==================== -->
+  <g id="brand-text">
+    <!-- SAFE in Red -->
+    <g fill="#C81D25">
+      <!-- S -->
+      <path d="M 64 426 C 64 416 71 411 83 411 C 94 411 101 415 102 423 L 90 424 C 89 420 87 418 83 418 C 78 418 76 420 76 423 C 76 427 80 429 88 431 C 99 434 104 438 104 445 C 104 454 96 460 83 460 C 70 460 62 454 62 444 L 74 443 C 75 448 78 452 84 452 C 89 452 92 449 92 446 C 92 442 88 440 81 437 C 70 434 64 430 64 426 Z" />
+      
+      <!-- A (Stylized Roof Peak with Window Panes) -->
+      <!-- Left rafter -->
+      <path d="M 126 459 L 148 412 L 157 412 L 179 459 L 166 459 L 160 445 L 145 445 L 139 459 Z M 148 438 L 157 438 L 152.5 427 Z" />
+      
+      <!-- F -->
+      <path d="M 198 412 L 230 412 L 230 420 L 210 420 L 210 431 L 227 431 L 227 439 L 210 439 L 210 459 L 198 459 Z" />
+
+      <!-- E -->
+      <path d="M 246 412 L 279 412 L 279 420 L 258 420 L 258 431 L 276 431 L 276 439 L 258 439 L 258 451 L 279 451 L 279 459 L 246 459 Z" />
+    </g>
+
+    <!-- Small window in A under peak -->
+    <g fill="#1E2229">
+      <rect x="149" y="448" width="4" height="4" />
+      <rect x="154" y="448" width="4" height="4" />
+      <rect x="149" y="453" width="4" height="4" />
+      <rect x="154" y="453" width="4" height="4" />
+    </g>
+
+    <!-- HIRE in Dark Charcoal -->
+    <g fill="#1E2229">
+      <!-- H -->
+      <path d="M 306 412 L 318 412 L 318 431 L 338 431 L 338 412 L 350 412 L 350 459 L 338 459 L 338 439 L 318 439 L 318 459 L 306 459 Z" />
+      
+      <!-- I -->
+      <path d="M 368 412 L 380 412 L 380 459 L 368 459 Z" />
+
+      <!-- R -->
+      <path d="M 397 412 L 421 412 C 430 412 436 417 436 426 C 436 432 432 437 425 438 L 437 459 L 424 459 L 413 440 L 409 440 L 409 459 L 397 459 Z M 409 420 L 409 432 L 420 432 C 424 432 427 430 427 426 C 427 422 424 420 420 420 Z" />
+
+      <!-- E -->
+      <path d="M 452 412 L 485 412 L 485 420 L 464 420 L 464 431 L 482 431 L 482 439 L 464 439 L 464 451 L 485 451 L 485 459 L 452 459 Z" />
+    </g>
+
+    <!-- ==================== SUBTITLE: ― METAL ROOFING ― ==================== -->
+    <!-- Left line -->
+    <line x1="60" y1="482" x2="140" y2="482" stroke="#555E6D" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- METAL ROOFING text -->
+    <text
+      x="250"
+      y="486"
+      text-anchor="middle"
+      fill="#555E6D"
+      font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif"
+      font-size="14"
+      font-weight="700"
+      letter-spacing="6"
+    >METAL ROOFING</text>
+    
+    <!-- Right line -->
+    <line x1="360" y1="482" x2="440" y2="482" stroke="#555E6D" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

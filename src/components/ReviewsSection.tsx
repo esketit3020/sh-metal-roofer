@@ -53,12 +53,12 @@ export default function ReviewsSection({ onOpenWriteReview, customReviews }: Rev
                 <span className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center font-black text-blue-600 border border-stone-200 text-sm">
                   G
                 </span>
-                <span className="text-xs uppercase tracking-widest font-bold text-stone-500">
+                <span className="text-xs uppercase tracking-normal font-semibold text-stone-500">
                   Google Verified Rating
                 </span>
               </div>
 
-              <div className="text-5xl sm:text-6xl font-black text-stone-950 font-['Plus_Jakarta_Sans',sans-serif] tracking-tight">
+              <div className="text-4xl sm:text-5xl font-bold text-stone-950 tracking-normal">
                 {BUSINESS_INFO.rating.toFixed(1)}
               </div>
 
@@ -126,14 +126,14 @@ export default function ReviewsSection({ onOpenWriteReview, customReviews }: Rev
             {/* Right Action: Write a review */}
             <div className="lg:col-span-3 flex flex-col justify-center items-center lg:items-end text-center lg:text-right">
               <span className="text-xs text-stone-500 mb-2">
-                Had your roof worked on by Mehari &amp; the SH team?
+                Had your roof worked on by the Safe Hire team?
               </span>
               <button
                 id="review-section-write-btn"
                 onClick={onOpenWriteReview}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-stone-900 hover:bg-stone-800 text-white text-xs sm:text-sm font-bold tracking-wide transition-all shadow-sm"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white text-xs sm:text-sm font-bold tracking-wide transition-all shadow-sm"
               >
-                <Edit3 className="w-4 h-4 text-lime-400" />
+                <Edit3 className="w-4 h-4 text-white" />
                 <span>WRITE A REVIEW</span>
               </button>
             </div>

@@ -26,30 +26,30 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
           {/* Main Hero Copy (Left Column) */}
           <div className="lg:col-span-8 space-y-6">
             {/* Tagline / Subheading matching screenshot */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lime-400/15 border border-lime-400/30 text-lime-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">
-              <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C81D25]/15 border border-[#C81D25]/30 text-red-300 text-xs sm:text-sm font-semibold tracking-normal uppercase">
+              <span className="w-2 h-2 rounded-full bg-[#C81D25] animate-pulse"></span>
               St. Albans, Victoria • 78 Perrett Ave
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-['Plus_Jakarta_Sans',sans-serif] leading-[1.15]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-normal text-white leading-[1.2]">
               Melbourne’s Roof Plumbing Experts –{' '}
               <span className="text-stone-200">Trusted in St. Albans</span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-medium text-lime-400 tracking-wide">
+            <p className="text-base sm:text-lg font-semibold text-red-400 tracking-normal">
               {BUSINESS_INFO.tagline}
             </p>
 
-            <p className="text-base sm:text-lg text-stone-300 max-w-2xl leading-relaxed">
+            <p className="text-sm sm:text-base text-stone-300 max-w-2xl leading-relaxed">
               Specialising in premium Colorbond® metal reroofing, tile-to-tin conversions, continuous guttering, and architectural cladding. Built to withstand Melbourne’s severe four-seasons-in-one-day storms.
             </p>
 
-            {/* CTAs matching screenshot */}
+            {/* CTAs matching brand */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 id="hero-book-quote-btn"
                 onClick={onOpenQuoteModal}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-extrabold text-sm sm:text-base tracking-wide transition-all shadow-[0_0_25px_rgba(163,230,53,0.35)] hover:shadow-[0_0_35px_rgba(163,230,53,0.5)] transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm sm:text-base tracking-wide transition-all shadow-[0_0_25px_rgba(200,29,37,0.35)] hover:shadow-[0_0_35px_rgba(200,29,37,0.5)] transform hover:-translate-y-0.5"
               >
                 <span>BOOK A FREE QUOTE</span>
                 <ArrowRight className="w-5 h-5" />
@@ -58,9 +58,9 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
               <a
                 id="hero-call-btn"
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md bg-stone-900/80 hover:bg-stone-800 text-white font-bold text-sm sm:text-base border border-stone-700 hover:border-lime-400/50 transition-all backdrop-blur-sm"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md bg-stone-900/80 hover:bg-stone-800 text-white font-bold text-sm sm:text-base border border-stone-700 hover:border-red-500/50 transition-all backdrop-blur-sm"
               >
-                <Phone className="w-5 h-5 text-lime-400" />
+                <Phone className="w-5 h-5 text-red-500" />
                 <span>Call {BUSINESS_INFO.phone}</span>
               </a>
             </div>
@@ -68,15 +68,15 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
             {/* Micro Highlights */}
             <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-stone-300 font-medium">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-lime-400 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
                 <span>VBA Licensed Plumbers</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-lime-400 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
                 <span>100% BlueScope® Steel</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-lime-400 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
                 <span>Free On-Site Inspections</span>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
                       Google Rating
                     </div>
                     <div className="font-bold text-stone-900 text-sm">
-                      SH Metal Roofers
+                      {BUSINESS_INFO.name}
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
               </div>
 
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-3xl font-extrabold text-stone-950 font-['Syne',sans-serif]">
+                <span className="text-3xl font-extrabold text-stone-950 font-['Plus_Jakarta_Sans',sans-serif]">
                   {BUSINESS_INFO.rating}
                 </span>
                 <div className="flex items-center text-amber-400">
@@ -132,7 +132,7 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
 
               <div className="mt-3 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 group-hover:text-stone-900 transition-colors">
                 <span className="underline decoration-stone-300">Click to read customer reviews</span>
-                <span className="text-lime-600 font-bold">→</span>
+                <span className="text-red-600 font-bold">→</span>
               </div>
             </button>
           </div>

@@ -76,12 +76,12 @@ export default function App() {
           href={`tel:${BUSINESS_INFO.phoneRaw}`}
           className="flex-1 py-2.5 px-3 rounded bg-stone-800 text-white font-bold text-xs flex items-center justify-center gap-1.5"
         >
-          <Phone className="w-3.5 h-3.5 text-lime-400" />
+          <Phone className="w-3.5 h-3.5 text-red-500" />
           <span>Call 0403 652 357</span>
         </a>
         <button
           onClick={() => handleOpenQuoteWithData()}
-          className="flex-1 py-2.5 px-3 rounded bg-lime-400 text-stone-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-md"
+          className="flex-1 py-2.5 px-3 rounded bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-md"
         >
           <span>Free Quote</span>
           <ArrowRight className="w-3.5 h-3.5" />

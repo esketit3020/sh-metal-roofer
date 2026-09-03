@@ -15,13 +15,13 @@ export default function MapAndDirections() {
     <section id="contact" className="bg-[#111317] text-white py-16 lg:py-24 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-red-500 uppercase tracking-normal">
             Local St. Albans Headquarters
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight font-['Syne',sans-serif] mt-1">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal mt-1">
             Find Us &amp; Get Directions
           </h2>
-          <p className="text-stone-400 text-sm sm:text-base mt-2">
+          <p className="text-stone-400 text-xs sm:text-sm mt-2">
             Centrally based in Melbourne’s West to provide rapid on-site roof inspections and emergency storm tarping.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function MapAndDirections() {
               <div className="p-4 rounded-xl bg-stone-950 border border-stone-800">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-lime-400/20 text-lime-400 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
@@ -51,7 +51,7 @@ export default function MapAndDirections() {
                     className="p-2 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs flex items-center gap-1 shrink-0"
                     title="Copy address"
                   >
-                    {copied ? <Check className="w-3.5 h-3.5 text-lime-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    {copied ? <Check className="w-3.5 h-3.5 text-red-500" /> : <Copy className="w-3.5 h-3.5" />}
                     <span className="hidden sm:inline">{copied ? 'Copied' : 'Copy'}</span>
                   </button>
                 </div>
@@ -61,7 +61,7 @@ export default function MapAndDirections() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-lime-400">
+                    <div className="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-red-500">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
@@ -73,7 +73,7 @@ export default function MapAndDirections() {
                   </div>
                   <a
                     href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                    className="px-3 py-1.5 rounded bg-lime-400 hover:bg-lime-300 text-stone-950 font-bold text-xs"
+                    className="px-3 py-1.5 rounded bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-xs"
                   >
                     Call Now
                   </a>
@@ -82,7 +82,7 @@ export default function MapAndDirections() {
                 {/* Operating Hours */}
                 <div className="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80 space-y-2">
                   <div className="flex items-center gap-2 text-xs font-semibold text-stone-300">
-                    <Clock className="w-3.5 h-3.5 text-lime-400" />
+                    <Clock className="w-3.5 h-3.5 text-red-500" />
                     <span>Operating Hours</span>
                   </div>
                   <div className="space-y-1 text-xs text-stone-400">
@@ -104,9 +104,9 @@ export default function MapAndDirections() {
                 href={BUSINESS_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(163,230,53,0.3)]"
+                className="w-full py-3.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(200,29,37,0.3)]"
               >
-                <Navigation className="w-4 h-4 fill-stone-950" />
+                <Navigation className="w-4 h-4 fill-white" />
                 <span>OPEN IN GOOGLE MAPS / GET DIRECTIONS</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -121,7 +121,7 @@ export default function MapAndDirections() {
               <div
                 className="absolute inset-0 opacity-20"
                 style={{
-                  backgroundImage: `radial-gradient(#a3e635 1px, transparent 1px), radial-gradient(#ffffff 1px, transparent 1px)`,
+                  backgroundImage: `radial-gradient(#C81D25 1px, transparent 1px), radial-gradient(#ffffff 1px, transparent 1px)`,
                   backgroundSize: '30px 30px',
                   backgroundPosition: '0 0, 15px 15px',
                 }}
@@ -131,24 +131,24 @@ export default function MapAndDirections() {
               <svg className="absolute inset-0 w-full h-full stroke-stone-700/60" fill="none">
                 <path d="M-50 150 Q 200 80, 500 220 T 900 120" strokeWidth="6" />
                 <path d="M250 -50 L 280 450" strokeWidth="4" />
-                <path d="M0 320 L 700 80" strokeWidth="3" strokeDasharray="6 4" stroke="#a3e635" opacity="0.4" />
+                <path d="M0 320 L 700 80" strokeWidth="3" strokeDasharray="6 4" stroke="#C81D25" opacity="0.4" />
               </svg>
 
               {/* Central Map Marker Pin */}
               <div className="relative z-10 flex flex-col items-center animate-bounce">
-                <div className="bg-stone-950 text-white px-3.5 py-1.5 rounded-lg border border-lime-400/80 shadow-2xl text-xs font-bold flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-lime-400"></span>
+                <div className="bg-stone-950 text-white px-3.5 py-1.5 rounded-lg border border-red-500/80 shadow-2xl text-xs font-bold flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
                   <span>78 Perrett Ave, St Albans</span>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-lime-400 text-stone-950 flex items-center justify-center shadow-[0_0_25px_rgba(163,230,53,0.8)] mt-1 border-2 border-white">
-                  <MapPin className="w-5 h-5 fill-stone-950" />
+                <div className="w-10 h-10 rounded-full bg-[#C81D25] text-white flex items-center justify-center shadow-[0_0_25px_rgba(200,29,37,0.8)] mt-1 border-2 border-white">
+                  <MapPin className="w-5 h-5 fill-white" />
                 </div>
                 <div className="w-3 h-1.5 bg-black/50 rounded-full blur-xs mt-1"></div>
               </div>
 
               {/* Service Suburbs Chips Overlay */}
               <div className="absolute bottom-4 left-4 right-4 bg-stone-950/85 backdrop-blur-md p-3 rounded-xl border border-stone-800 text-xs">
-                <div className="text-[11px] font-semibold text-lime-400 uppercase tracking-wider mb-1.5">
+                <div className="text-[11px] font-semibold text-red-400 uppercase tracking-wider mb-1.5">
                   Suburbs We Service Daily (Within 30 mins):
                 </div>
                 <div className="flex flex-wrap gap-1.5 text-stone-300 text-[11px]">

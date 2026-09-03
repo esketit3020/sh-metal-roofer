@@ -1,6 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { X, CheckCircle2, Phone, Calendar, ShieldCheck, ArrowRight, Upload } from 'lucide-react';
 import { BUSINESS_INFO, COLORBOND_SWATCHES } from '../data/roofingData';
+import { SafeHireLogo } from './SafeHireLogo';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -48,10 +49,10 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
 
         {submitted ? (
           <div className="text-center py-8 space-y-4">
-            <div className="w-16 h-16 rounded-full bg-lime-100 text-lime-600 flex items-center justify-center mx-auto shadow-inner">
+            <div className="w-16 h-16 rounded-full bg-red-50 text-red-600 flex items-center justify-center mx-auto shadow-inner">
               <CheckCircle2 className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-extrabold text-stone-900 font-['Syne',sans-serif]">
+            <h3 className="text-2xl font-extrabold text-stone-900">
               Free Inspection Request Received!
             </h3>
             <p className="text-stone-600 text-sm max-w-md mx-auto leading-relaxed">
@@ -65,7 +66,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
             <div className="pt-2">
               <button
                 onClick={handleReset}
-                className="px-8 py-3 rounded-md bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm"
+                className="px-8 py-3 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm"
               >
                 Done
               </button>
@@ -74,11 +75,16 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
         ) : (
           <div>
             <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-lime-100 text-lime-800 text-xs font-bold uppercase tracking-wider mb-2">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                VBA Licensed • Free Drone &amp; Roof Inspection
+              <div className="flex items-center justify-between gap-4 mb-3">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wide border border-red-100">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  VBA Licensed • Free Drone &amp; Roof Inspection
+                </div>
+                <div className="hidden sm:block">
+                  <SafeHireLogo variant="mark" theme="light" size="sm" />
+                </div>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-950 font-['Syne',sans-serif]">
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-950">
                 Book A Free Quote &amp; Inspection
               </h3>
               <p className="text-stone-600 text-xs sm:text-sm mt-1">
@@ -98,7 +104,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                     placeholder="e.g. David Smith"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                   />
                 </div>
 
@@ -112,7 +118,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                     placeholder="e.g. 0412 345 678"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                   />
                 </div>
               </div>
@@ -127,7 +133,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                     placeholder="david@example.com.au"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                   />
                 </div>
 
@@ -141,7 +147,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                     placeholder="e.g. St Albans, Keilor, Sunshine"
                     value={suburb}
                     onChange={(e) => setSuburb(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                   />
                 </div>
               </div>
@@ -154,7 +160,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                   <select
                     value={service}
                     onChange={(e) => setService(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   >
                     <option value="Tile to Tin Conversion">Tile to Tin Conversion (Colorbond)</option>
                     <option value="Residential Metal Reroof">Residential Metal Reroof</option>
@@ -172,7 +178,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                   <select
                     value={colour}
                     onChange={(e) => setColour(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   >
                     {COLORBOND_SWATCHES.map((sw) => (
                       <option key={sw.name} value={sw.name}>
@@ -192,7 +198,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                   placeholder="Tell us about your roof (e.g. single or double storey, age of roof, current leaks, preferred dates)..."
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="w-full px-3.5 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-lime-500"
+                  className="w-full px-3.5 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                 />
               </div>
 
@@ -202,7 +208,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                   id="urgent-leak"
                   checked={urgent}
                   onChange={(e) => setUrgent(e.target.checked)}
-                  className="w-4 h-4 rounded text-lime-600 focus:ring-lime-500"
+                  className="w-4 h-4 rounded text-red-600 focus:ring-red-500"
                 />
                 <label htmlFor="urgent-leak" className="text-xs text-stone-700 cursor-pointer font-medium">
                   <strong>Urgent:</strong> We have an active water leak or recent storm damage.
@@ -212,7 +218,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
               <div className="pt-3">
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-md bg-lime-400 hover:bg-lime-300 text-stone-950 font-extrabold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-[0_4px_20px_rgba(200,29,37,0.3)] flex items-center justify-center gap-2"
                 >
                   <span>SUBMIT FREE QUOTE REQUEST</span>
                   <ArrowRight className="w-4 h-4" />
