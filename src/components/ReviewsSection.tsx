@@ -25,18 +25,21 @@ export default function ReviewsSection({ onOpenWriteReview, customReviews }: Rev
         );
       });
 
-  const total = allReviews.length || 1;
-  const count5 = allReviews.filter((r) => r.rating === 5).length;
-  const count4 = allReviews.filter((r) => r.rating === 4).length;
-  const count3 = allReviews.filter((r) => r.rating === 3).length;
-  const count2 = allReviews.filter((r) => r.rating === 2).length;
-  const count1 = allReviews.filter((r) => r.rating === 1).length;
+  const newlyAddedCount = customReviews.length;
+  const totalReviewsCount = BUSINESS_INFO.reviewCount + newlyAddedCount;
 
-  const pct5 = Math.round((count5 / total) * 100);
-  const pct4 = Math.round((count4 / total) * 100);
-  const pct3 = Math.round((count3 / total) * 100);
-  const pct2 = Math.round((count2 / total) * 100);
-  const pct1 = Math.round((count1 / total) * 100);
+  // 6 five-star reviews + 1 one-star review on Google, plus any user-added reviews
+  const count5 = 6 + customReviews.filter((r) => r.rating === 5).length;
+  const count4 = 0 + customReviews.filter((r) => r.rating === 4).length;
+  const count3 = 0 + customReviews.filter((r) => r.rating === 3).length;
+  const count2 = 0 + customReviews.filter((r) => r.rating === 2).length;
+  const count1 = 1 + customReviews.filter((r) => r.rating === 1).length;
+
+  const pct5 = Math.round((count5 / totalReviewsCount) * 100);
+  const pct4 = Math.round((count4 / totalReviewsCount) * 100);
+  const pct3 = Math.round((count3 / totalReviewsCount) * 100);
+  const pct2 = Math.round((count2 / totalReviewsCount) * 100);
+  const pct1 = Math.round((count1 / totalReviewsCount) * 100);
 
   return (
     <section id="reviews" className="bg-white text-stone-900 py-16 lg:py-24 border-t border-stone-200">
@@ -59,14 +62,25 @@ export default function ReviewsSection({ onOpenWriteReview, customReviews }: Rev
                 {BUSINESS_INFO.rating.toFixed(1)}
               </div>
 
-              <div className="flex items-center justify-center lg:justify-start text-amber-400 my-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current" />
-                ))}
+              <div className="flex items-center justify-center lg:justify-start gap-0.5 my-2">
+                {[1, 2, 3, 4, 5].map((index) => {
+                  const fillPercent = Math.max(0, Math.min(1, BUSINESS_INFO.rating - (index - 1)));
+                  return (
+                    <div key={index} className="relative w-5 h-5">
+                      <Star className="w-5 h-5 fill-stone-200 text-stone-200" />
+                      <div
+                        className="absolute top-0 left-0 h-full overflow-hidden text-amber-400"
+                        style={{ width: `${fillPercent * 100}%` }}
+                      >
+                        <Star className="w-5 h-5 fill-current text-amber-400" />
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="text-xs text-stone-500">
-                Based on <strong className="text-stone-800">{allReviews.length} client reviews</strong> for metal roofing in St. Albans &amp; Greater Melbourne.
+                Based on <strong className="text-stone-800">{totalReviewsCount} reviews on Google</strong> for metal roofing in St. Albans &amp; Greater Melbourne.
               </div>
             </div>
 

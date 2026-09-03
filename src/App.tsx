@@ -57,7 +57,7 @@ export default function App() {
         {/* 6. "Trusted by Homeowners & Builders" dark project showcase matching screenshot */}
         <ProjectShowcase onOpenQuoteModal={() => handleOpenQuoteWithData()} />
 
-        {/* 7. Google Reviews & Testimonials (5.0 Rating) */}
+        {/* 7. Google Reviews & Testimonials (4.4 Rating) */}
         <ReviewsSection
           onOpenWriteReview={() => setWriteReviewModalOpen(true)}
           customReviews={customReviews}

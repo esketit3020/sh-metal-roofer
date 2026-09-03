@@ -177,7 +177,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
             <ul className="space-y-2 text-xs text-stone-400">
               <li><a href="#why-us" className="hover:text-lime-400 transition-colors">Why SH Metal Roofers</a></li>
               <li><a href="#projects" className="hover:text-lime-400 transition-colors">Completed Projects</a></li>
-              <li><a href="#reviews" className="hover:text-lime-400 transition-colors">Google Reviews (5.0 ★)</a></li>
+              <li><a href="#reviews" className="hover:text-lime-400 transition-colors">Google Reviews (4.4 ★)</a></li>
               <li><a href="#contact" className="hover:text-lime-400 transition-colors">Get Directions (St Albans)</a></li>
             </ul>
           </div>

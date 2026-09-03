@@ -65,7 +65,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                 </div>
                 <div>
                   <h4 className="font-bold text-stone-900 text-sm">Trusted by Homeowners &amp; Builders</h4>
-                  <p className="text-xs text-stone-500 mt-0.5">Over 450+ completed roofs and 5.0 star Google feedback.</p>
+                  <p className="text-xs text-stone-500 mt-0.5">Over 450+ completed roofs and 4.4 star Google feedback.</p>
                 </div>
               </div>
             </div>
