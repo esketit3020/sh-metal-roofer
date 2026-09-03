@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Navigation, Phone, Clock, Car, Train, ExternalLink, Check, Copy } from 'lucide-react';
+import { MapPin, Navigation, Phone, Clock, ExternalLink, Check, Copy } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/roofingData';
 
 export default function MapAndDirections() {
@@ -54,19 +54,6 @@ export default function MapAndDirections() {
                     {copied ? <Check className="w-3.5 h-3.5 text-lime-400" /> : <Copy className="w-3.5 h-3.5" />}
                     <span className="hidden sm:inline">{copied ? 'Copied' : 'Copy'}</span>
                   </button>
-                </div>
-
-                {/* Commute breakdown matching prompt: 38 mins · 13 mins */}
-                <div className="mt-4 pt-3 border-t border-stone-800/80 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1.5 text-stone-300">
-                    <Car className="w-4 h-4 text-lime-400" />
-                    <span>Drive: <strong className="text-white">{BUSINESS_INFO.driveTime}</strong></span>
-                  </div>
-                  <span className="text-stone-600">•</span>
-                  <div className="flex items-center gap-1.5 text-stone-300">
-                    <Train className="w-4 h-4 text-blue-400" />
-                    <span>Public Transit: <strong className="text-white">{BUSINESS_INFO.transitTime}</strong></span>
-                  </div>
                 </div>
               </div>
 

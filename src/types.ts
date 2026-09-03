@@ -8,6 +8,8 @@ export interface Review {
   verified: boolean;
   serviceType: string;
   location: string;
+  badge?: string;
+  isNew?: boolean;
 }
 
 export interface Project {

@@ -10,10 +10,8 @@ export const BUSINESS_INFO = {
   suburb: "St Albans",
   state: "VIC",
   postcode: "3021",
-  rating: 4.47,
-  reviewCount: 47,
-  transitTime: "38 mins",
-  driveTime: "13 mins",
+  rating: 5.0,
+  reviewCount: 6,
   vbaLicense: "VBA Licensed Roof Plumber #104829",
   abn: "ABN 48 912 304 881",
   serviceRadius: "St Albans & Greater Melbourne (Western & Northern Suburbs)",
@@ -88,54 +86,72 @@ export const PROJECTS: Project[] = [
 
 export const REVIEWS: Review[] = [
   {
-    id: "rev-1",
-    author: "Minh Nguyen",
+    id: "rev-rita",
+    author: "Rita",
     rating: 5,
-    date: "2 weeks ago",
-    text: "SH Metal Roofers did an outstanding job converting our old brittle terracotta tile roof to Colorbond Monument in St Albans. Steve and the crew were punctual, kept the driveway spotless every afternoon, and the price was significantly fairer than the big franchise quote. Highly recommended!",
+    date: "20 hours ago",
+    badge: "Local Guide · 13 reviews · 19 photos",
+    isNew: true,
+    text: "Very well priced and he has done a good job.",
     verified: true,
-    serviceType: "Tile to Tin Conversion",
-    location: "St Albans, VIC"
+    serviceType: "Roofing Service",
+    location: "Melbourne, VIC"
   },
   {
-    id: "rev-2",
-    author: "David Caruana",
+    id: "rev-robert-d",
+    author: "Robert D",
     rating: 5,
-    date: "1 month ago",
-    text: "Had severe roof leaks during the heavy Melbourne storms. Called 0403 652 357 and they came out within hours to tarp and inspect. We decided to do a full corrugated metal reroof and new guttering. Workmanship is second to none. Reliable Aussie roofers.",
+    date: "3 weeks ago",
+    badge: "1 review",
+    isNew: true,
+    text: "Great price. Great to deal with, prompt friendly service, explained everything to me in easy to follow detail, sent me before and after photos showing what the issue was and the repairs made. Highly recommended!",
     verified: true,
-    serviceType: "Emergency Leak & Reroof",
-    location: "Keilor East, VIC"
+    serviceType: "Roof Repairs & Inspection",
+    location: "Melbourne, VIC"
   },
   {
-    id: "rev-3",
-    author: "Elena Vasquez",
+    id: "rev-taneana-melek",
+    author: "Taneana Melek",
     rating: 5,
     date: "2 months ago",
-    text: "Top quality roofing contractor. Explained the building permit rules, insulation blanket ratings, and helped us choose Surfmist to keep our house cool. The finished roof looks like a luxury architectural magazine photo.",
+    badge: "Local Guide · 19 reviews · 19 photos",
+    text: "Words cannot describe how pleased we are with the finishing touches of our pergola roofing. We came across this small business and it great to deal with one person (Mehari) directly through the whole planning, delivery and installation.",
     verified: true,
-    serviceType: "Colorbond Reroofing",
-    location: "Sunshine, VIC"
+    serviceType: "Pergola Roofing",
+    location: "Melbourne, VIC"
   },
   {
-    id: "rev-4",
-    author: "Robert Miller",
-    rating: 4,
-    date: "3 months ago",
-    text: "Very professional metal roof plumbing. Replaced all our rusted quad gutters, downpipes, and repaired the flashing around our chimney. Honest advice and prompt VBA compliance paperwork provided.",
-    verified: true,
-    serviceType: "Gutters & Flashings",
-    location: "Taylors Lakes, VIC"
-  },
-  {
-    id: "rev-5",
-    author: "Sarah O'Connor",
+    id: "rev-joe-greenhalgh",
+    author: "Joe Greenhalgh",
     rating: 5,
-    date: "4 months ago",
-    text: "Transformed our 1970s weatherboard home with a new Colorbond roof and dark gutters. The difference in acoustic insulation with the anticon blanket is unbelievable during rain. 10/10 service from local St Albans tradesmen.",
+    date: "2 months ago",
+    badge: "Local Guide · 31 reviews · 12 photos",
+    text: "Fixed the roof no more leaks goods great and even put insulation in the roof too so just give him a ring and he'll come by and give you quote",
     verified: true,
-    serviceType: "Residential Reroofing",
-    location: "Cairnlea, VIC"
+    serviceType: "Roof Repair & Insulation",
+    location: "Melbourne, VIC"
+  },
+  {
+    id: "rev-mark-hanosi",
+    author: "Mark Hanosi",
+    rating: 5,
+    date: "2 months ago",
+    badge: "1 review · 2 photos",
+    text: "Very happy with the work completed by mehari. He was professional, reliable and completed the job to a high standard. I would highly recommend him to anyone needing roofing or plumbing work done.",
+    verified: true,
+    serviceType: "Roofing & Plumbing",
+    location: "Melbourne, VIC"
+  },
+  {
+    id: "rev-salah-dousa",
+    author: "Salah Dousa",
+    rating: 5,
+    date: "2 months ago",
+    badge: "7 reviews",
+    text: "Awesome service on time and very efficient communication and after support!! Thanks a lot for accommodating our urgent request.",
+    verified: true,
+    serviceType: "Urgent Service & Repairs",
+    location: "Melbourne, VIC"
   }
 ];
 
