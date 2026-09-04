@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ArrowRight, Check, ShieldCheck, Award, Wrench, Sparkles, X } from 'lucide-react';
+import { ArrowRight, Check, ShieldCheck, Award, Wrench, Sparkles, X, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/roofingData';
 
 interface TrustedExpertsProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
 export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps) {
@@ -215,15 +215,13 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
               </div>
 
               <div className="pt-4 flex gap-3">
-                <button
-                  onClick={() => {
-                    setAboutModalOpen(false);
-                    onOpenQuoteModal();
-                  }}
-                  className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors"
+                <a
+                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                  className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors flex items-center justify-center gap-2"
                 >
-                  Book Free On-Site Inspection
-                </button>
+                  <Phone className="w-4 h-4" />
+                  <span>Call {BUSINESS_INFO.phone} to Request Quote</span>
+                </a>
                 <button
                   onClick={() => setAboutModalOpen(false)}
                   className="px-5 py-3 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-sm"

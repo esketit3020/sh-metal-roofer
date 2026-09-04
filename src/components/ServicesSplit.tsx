@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ArrowRight, Check, Home, Building2, ChevronRight, X } from 'lucide-react';
-import { SERVICES } from '../data/roofingData';
+import { ArrowRight, Check, Home, Building2, ChevronRight, X, Phone } from 'lucide-react';
+import { SERVICES, BUSINESS_INFO } from '../data/roofingData';
 
 interface ServicesSplitProps {
-  onOpenQuoteModal: (data?: { service?: string }) => void;
+  onOpenQuoteModal?: (data?: { service?: string }) => void;
 }
 
 export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) {
@@ -137,13 +137,14 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                 Full Victorian Metal Roofing Services
               </h3>
             </div>
-            <button
-              onClick={onOpenQuoteModal}
+            <a
+              href={`tel:${BUSINESS_INFO.phoneRaw}`}
               className="inline-flex items-center gap-2 text-sm font-bold text-stone-900 hover:text-red-600 transition-colors"
+              title="Call to request custom quote"
             >
-              <span>Request custom quote</span>
-              <ChevronRight className="w-4 h-4 text-red-600" />
-            </button>
+              <Phone className="w-4 h-4 text-red-600" />
+              <span>Call for custom quote ({BUSINESS_INFO.phone})</span>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -172,12 +173,14 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   </ul>
                 </div>
 
-                <button
-                  onClick={() => onOpenQuoteModal({ service: srv.title })}
-                  className="w-full py-2 px-3 rounded bg-stone-100 hover:bg-[#C81D25] hover:text-white text-stone-900 text-xs font-bold transition-colors text-center"
+                <a
+                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                  className="w-full py-2.5 px-3 rounded bg-stone-100 hover:bg-[#C81D25] hover:text-white text-stone-900 text-xs font-bold transition-colors text-center inline-flex items-center justify-center gap-2"
+                  title={`Call to request quote for ${srv.title}`}
                 >
-                  Book Assessment For This Service
-                </button>
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Call to Request Quote</span>
+                </a>
               </div>
             ))}
           </div>
@@ -225,15 +228,13 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   </div>
                 </div>
                 <div className="pt-4 flex gap-3">
-                  <button
-                    onClick={() => {
-                      setSelectedService(null);
-                      onOpenQuoteModal();
-                    }}
-                    className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors"
+                  <a
+                    href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                    className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors flex items-center justify-center gap-2"
                   >
-                    Get a Residential Quote
-                  </button>
+                    <Phone className="w-4 h-4" />
+                    <span>Call {BUSINESS_INFO.phone} For Quote</span>
+                  </a>
                   <button
                     onClick={() => setSelectedService(null)}
                     className="px-5 py-3 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-sm"
@@ -272,15 +273,13 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   </div>
                 </div>
                 <div className="pt-4 flex gap-3">
-                  <button
-                    onClick={() => {
-                      setSelectedService(null);
-                      onOpenQuoteModal();
-                    }}
-                    className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors"
+                  <a
+                    href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                    className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm shadow-md transition-colors flex items-center justify-center gap-2"
                   >
-                    Request Commercial Tender / Quote
-                  </button>
+                    <Phone className="w-4 h-4" />
+                    <span>Call {BUSINESS_INFO.phone} For Tender / Quote</span>
+                  </a>
                   <button
                     onClick={() => setSelectedService(null)}
                     className="px-5 py-3 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-sm"

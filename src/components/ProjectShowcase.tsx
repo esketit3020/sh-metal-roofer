@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Layers, Eye, CheckCircle2 } from 'lucide-react';
-import { PROJECTS } from '../data/roofingData';
+import { ArrowRight, ChevronLeft, ChevronRight, Layers, Eye, CheckCircle2, Phone } from 'lucide-react';
+import { PROJECTS, BUSINESS_INFO } from '../data/roofingData';
 
 interface ProjectShowcaseProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
 export default function ProjectShowcase({ onOpenQuoteModal }: ProjectShowcaseProps) {
@@ -185,15 +185,13 @@ export default function ProjectShowcase({ onOpenQuoteModal }: ProjectShowcasePro
                       <h4 className="font-bold text-sm text-white mb-1">{proj.title}</h4>
                       <p className="text-xs text-stone-400 line-clamp-2 mb-3">{proj.description}</p>
                     </div>
-                    <button
-                      onClick={() => {
-                        setShowAllModal(false);
-                        onOpenQuoteModal();
-                      }}
-                      className="w-full py-2 bg-stone-800 hover:bg-[#C81D25] hover:text-white text-stone-200 text-xs font-bold rounded transition-colors"
+                    <a
+                      href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                      className="w-full py-2 bg-stone-800 hover:bg-[#C81D25] hover:text-white text-stone-200 text-xs font-bold rounded transition-colors flex items-center justify-center gap-1.5"
                     >
-                      Get Similar Quote for My Home
-                    </button>
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>Call to Request Quote</span>
+                    </a>
                   </div>
                 </div>
               ))}

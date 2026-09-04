@@ -66,22 +66,15 @@ export default function App() {
       {/* 9. "Make It Happen With Us!" CTA Banner, Newsletter, and Footer matching screenshot */}
       <Footer onOpenQuoteModal={() => handleOpenQuoteWithData()} />
 
-      {/* Floating Mobile Sticky Bar for quick emergency call or quote */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#111317]/95 backdrop-blur-md border-t border-stone-800 p-2.5 flex sm:hidden items-center justify-between gap-2 shadow-2xl">
+      {/* Floating Mobile Sticky Bar for quick call to request quote */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#111317]/95 backdrop-blur-md border-t border-stone-800 p-2.5 flex sm:hidden items-center justify-center shadow-2xl">
         <a
           href={`tel:${BUSINESS_INFO.phoneRaw}`}
-          className="flex-1 py-2.5 px-3 rounded bg-stone-800 text-white font-bold text-xs flex items-center justify-center gap-1.5"
+          className="w-full py-3 px-4 rounded bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-xs tracking-wide flex items-center justify-center gap-2 shadow-md uppercase"
         >
-          <Phone className="w-3.5 h-3.5 text-red-500" />
-          <span>Call 0403 652 357</span>
+          <Phone className="w-4 h-4 text-white" />
+          <span>CALL 0403 652 357 TO REQUEST QUOTE</span>
         </a>
-        <button
-          onClick={() => handleOpenQuoteWithData()}
-          className="flex-1 py-2.5 px-3 rounded bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-md"
-        >
-          <span>Free Quote</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </button>
       </div>
 
       {/* Interactive Modals */}

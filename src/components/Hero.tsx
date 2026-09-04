@@ -2,11 +2,11 @@ import { ArrowRight, Phone, ShieldCheck, Award, Wrench, CheckCircle2 } from 'luc
 import { BUSINESS_INFO } from '../data/roofingData';
 
 interface HeroProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
   onOpenReviewModal: () => void;
 }
 
-export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps) {
+export default function Hero({ onOpenReviewModal }: HeroProps) {
   return (
     <section className="relative min-h-[580px] lg:min-h-[660px] flex items-center justify-center overflow-hidden bg-stone-950">
       {/* Background Hero Image - High-end modern metal roof home matching screenshot */}
@@ -44,24 +44,25 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
               Specialising in premium Colorbond® metal reroofing, tile-to-tin conversions, continuous guttering, and architectural cladding. Built to withstand Melbourne’s severe four-seasons-in-one-day storms.
             </p>
 
-            {/* CTAs matching brand */}
+            {/* CTAs */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
-              <button
-                id="hero-book-quote-btn"
-                onClick={onOpenQuoteModal}
+              <a
+                id="hero-call-quote-btn"
+                href={`tel:${BUSINESS_INFO.phoneRaw}`}
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm sm:text-base tracking-wide transition-all shadow-[0_0_25px_rgba(200,29,37,0.35)] hover:shadow-[0_0_35px_rgba(200,29,37,0.5)] transform hover:-translate-y-0.5"
+                title="Call to request a free quote"
               >
-                <span>BOOK A FREE QUOTE</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
+                <Phone className="w-5 h-5 text-white" />
+                <span>CALL 0403 652 357 TO REQUEST QUOTE</span>
+              </a>
 
               <a
-                id="hero-call-btn"
-                href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                id="hero-services-btn"
+                href="#services"
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md bg-stone-900/80 hover:bg-stone-800 text-white font-bold text-sm sm:text-base border border-stone-700 hover:border-red-500/50 transition-all backdrop-blur-sm"
               >
-                <Phone className="w-5 h-5 text-red-500" />
-                <span>Call {BUSINESS_INFO.phone}</span>
+                <span>Explore Services</span>
+                <ArrowRight className="w-4 h-4 text-red-500" />
               </a>
             </div>
 
@@ -127,7 +128,7 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
               </div>
 
               <div className="text-xs text-stone-600 font-medium">
-                Based on {BUSINESS_INFO.reviewCount} customer reviews in St. Albans &amp; Victoria
+                Based on {BUSINESS_INFO.reviewCount} customer reviews in Melbourne
               </div>
 
               <div className="mt-3 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 group-hover:text-stone-900 transition-colors">

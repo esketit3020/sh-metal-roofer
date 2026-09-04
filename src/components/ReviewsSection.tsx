@@ -80,7 +80,7 @@ export default function ReviewsSection({ onOpenWriteReview, customReviews }: Rev
               </div>
 
               <div className="text-xs text-stone-500">
-                Based on <strong className="text-stone-800">{totalReviewsCount} reviews on Google</strong> for metal roofing in St. Albans &amp; Greater Melbourne.
+                Based on <strong className="text-stone-800">{totalReviewsCount} customer reviews</strong> in Melbourne.
               </div>
             </div>
 

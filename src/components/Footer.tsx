@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from '../data/roofingData';
 import { SafeHireLogo } from './SafeHireLogo';
 
 interface FooterProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
 export default function Footer({ onOpenQuoteModal }: FooterProps) {
@@ -39,22 +39,14 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
             Reach out to our friendly team today, and let us bring your next metal roofing, tile conversion, or guttering project to life.
           </p>
           <div className="pt-2 flex flex-wrap justify-center gap-4">
-            <button
-              id="footer-make-it-happen-quote-btn"
-              onClick={onOpenQuoteModal}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-[0_4px_25px_rgba(200,29,37,0.4)] transform hover:-translate-y-0.5"
-            >
-              <span>BOOK A FREE QUOTE</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-
             <a
-              id="footer-make-it-happen-call-btn"
+              id="footer-make-it-happen-quote-btn"
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-md bg-stone-900/90 hover:bg-stone-800 text-white font-bold text-sm border border-stone-700 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-[0_4px_25px_rgba(200,29,37,0.4)] transform hover:-translate-y-0.5"
+              title="Call to request a free quote"
             >
-              <Phone className="w-4 h-4 text-red-500" />
-              <span>{BUSINESS_INFO.phone}</span>
+              <Phone className="w-4 h-4" />
+              <span>CALL 0403 652 357 TO REQUEST QUOTE</span>
             </a>
           </div>
         </div>

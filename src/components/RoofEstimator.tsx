@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Calculator, Sparkles, Check, ArrowRight, Shield, Calendar, CreditCard, ChevronRight } from 'lucide-react';
-import { COLORBOND_SWATCHES } from '../data/roofingData';
+import { Calculator, Sparkles, Check, ArrowRight, Shield, Calendar, CreditCard, ChevronRight, Phone } from 'lucide-react';
+import { COLORBOND_SWATCHES, BUSINESS_INFO } from '../data/roofingData';
 import { ColorbondSwatch } from '../types';
 
 interface RoofEstimatorProps {
-  onOpenQuoteModal: (initialData?: { service?: string; size?: number; colour?: string }) => void;
+  onOpenQuoteModal?: (initialData?: { service?: string; size?: number; colour?: string }) => void;
 }
 
 export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) {
@@ -212,16 +212,17 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
               </div>
             </div>
 
-            {/* Book Inspection with estimate */}
+            {/* Call to Request Quote with estimate */}
             <div className="space-y-3">
-              <button
-                id="estimator-book-btn"
-                onClick={handleBookWithDetails}
+              <a
+                id="estimator-call-btn"
+                href={`tel:${BUSINESS_INFO.phoneRaw}`}
                 className="w-full py-3.5 px-4 rounded-md bg-[#C81D25] hover:bg-[#A8151D] text-white font-extrabold text-sm tracking-wide transition-all shadow-[0_4px_20px_rgba(200,29,37,0.3)] flex items-center justify-center gap-2"
+                title="Call to request quote for this estimate"
               >
-                <span>BOOK FREE ON-SITE INSPECTION</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+                <Phone className="w-4 h-4" />
+                <span>CALL 0403 652 357 TO REQUEST QUOTE</span>
+              </a>
 
               <div className="text-center text-[11px] text-stone-400">
                 Exact fixed price guaranteed in writing after complimentary drone/ladder inspection.
@@ -271,12 +272,13 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
-                <button
-                  onClick={() => onOpenQuoteModal({ service: 'Flexible Finance Reroof' })}
+                <a
+                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-xs sm:text-sm transition-colors"
                 >
-                  Apply with Quote
-                </button>
+                  <Phone className="w-3.5 h-3.5 text-red-600" />
+                  <span>Call About Finance</span>
+                </a>
               </div>
             </div>
           </div>
@@ -314,15 +316,13 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
             </ul>
 
             <div className="pt-2 flex gap-3">
-              <button
-                onClick={() => {
-                  setShowFinanceModal(false);
-                  onOpenQuoteModal({ service: 'Finance Application' });
-                }}
-                className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm"
+              <a
+                href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                className="flex-1 py-3 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-sm flex items-center justify-center gap-2"
               >
-                Inquire About Finance Quote
-              </button>
+                <Phone className="w-4 h-4" />
+                <span>Call {BUSINESS_INFO.phone} For Finance</span>
+              </a>
               <button
                 onClick={() => setShowFinanceModal(false)}
                 className="px-5 py-3 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-sm"
