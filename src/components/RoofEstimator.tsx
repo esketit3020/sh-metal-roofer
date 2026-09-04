@@ -1,22 +1,22 @@
 import { useState } from 'react';
 import { Calculator, Sparkles, Check, ArrowRight, Shield, Calendar, CreditCard, ChevronRight, Phone } from 'lucide-react';
-import { COLORBOND_SWATCHES, BUSINESS_INFO } from '../data/roofingData';
-import { ColorbondSwatch } from '../types';
+import { ROOF_COLOUR_SWATCHES, BUSINESS_INFO } from '../data/roofingData';
+import { RoofColourSwatch } from '../types';
 
 interface RoofEstimatorProps {
   onOpenQuoteModal?: (initialData?: { service?: string; size?: number; colour?: string }) => void;
 }
 
 export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) {
-  const [serviceType, setServiceType] = useState<'tile-to-tin' | 'reroof' | 'gutters' | 'commercial'>('tile-to-tin');
+  const [serviceType, setServiceType] = useState<'tile-to-metal' | 'reroof' | 'gutters' | 'commercial'>('tile-to-metal');
   const [roofSize, setRoofSize] = useState<number>(180);
-  const [selectedColour, setSelectedColour] = useState<ColorbondSwatch>(COLORBOND_SWATCHES[0]);
+  const [selectedColour, setSelectedColour] = useState<RoofColourSwatch>(ROOF_COLOUR_SWATCHES[0]);
   const [showFinanceModal, setShowFinanceModal] = useState(false);
 
   // Price calculations based on Victorian market rates
   const getEstimate = () => {
     let ratePerSqm = 100;
-    if (serviceType === 'tile-to-tin') ratePerSqm = 125; // includes tile strip, battens, insulation
+    if (serviceType === 'tile-to-metal') ratePerSqm = 125; // includes tile strip, battens, insulation
     if (serviceType === 'reroof') ratePerSqm = 95;
     if (serviceType === 'gutters') ratePerSqm = 45; // linear approx
     if (serviceType === 'commercial') ratePerSqm = 85;
@@ -30,7 +30,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
   const estimate = getEstimate();
 
   const handleBookWithDetails = () => {
-    let serviceLabel = 'Tile to Tin Conversion';
+    let serviceLabel = 'Tile to Metal Conversion';
     if (serviceType === 'reroof') serviceLabel = 'Residential Metal Reroof';
     if (serviceType === 'gutters') serviceLabel = 'Gutters & Downpipes';
     if (serviceType === 'commercial') serviceLabel = 'Commercial Metal Roofing';
@@ -51,7 +51,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
             Transparent Victorian Pricing
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal text-stone-900">
-            Instant Roof Cost Estimator &amp; Colorbond® Visualizer
+            Instant Roof Cost Estimator &amp; Colour Visualizer
           </h2>
           <p className="text-stone-600 text-xs sm:text-sm mt-2">
             Calculate a realistic ballpark estimate for your St. Albans or Melbourne home in under 30 seconds.
@@ -69,8 +69,8 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
               </label>
               <div className="grid grid-cols-2 gap-2.5">
                 {[
-                  { id: 'tile-to-tin', label: 'Tile to Tin Conversion', tag: 'Most Popular' },
-                  { id: 'reroof', label: 'Colorbond® Reroof', tag: 'Metal Replacement' },
+                  { id: 'tile-to-metal', label: 'Tile to Metal Conversion', tag: 'Most Popular' },
+                  { id: 'reroof', label: 'Metal Roof Replacement', tag: 'Complete Reroof' },
                   { id: 'gutters', label: 'Gutters & Downpipes', tag: 'Continuous Quad' },
                   { id: 'commercial', label: 'Commercial Metal Deck', tag: 'Industrial/Builder' },
                 ].map((item) => (
@@ -122,11 +122,11 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
               </div>
             </div>
 
-            {/* Step 3: Colorbond Swatch Selection */}
-            <div id="colorbond-colours">
+            {/* Step 3: Colour Selection */}
+            <div id="roof-colours">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-sm font-bold text-stone-800 uppercase tracking-wide">
-                  3. Colorbond® Colour Selection
+                  3. Roof Colour Selection
                 </label>
                 <span className="text-xs font-semibold text-stone-600">
                   Selected: <strong className="text-stone-900">{selectedColour.name}</strong>
@@ -134,7 +134,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
               </div>
 
               <div className="grid grid-cols-5 gap-2">
-                {COLORBOND_SWATCHES.map((swatch) => (
+                {ROOF_COLOUR_SWATCHES.map((swatch) => (
                   <button
                     key={swatch.name}
                     onClick={() => setSelectedColour(swatch)}
@@ -150,13 +150,13 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                       style={{ backgroundColor: swatch.hex }}
                     />
                     <span className="text-[10px] sm:text-[11px] font-semibold text-stone-800 text-center leading-tight truncate w-full">
-                      {swatch.name.replace('®', '')}
+                      {swatch.name}
                     </span>
                   </button>
                 ))}
               </div>
               <p className="text-xs text-stone-500 mt-2 italic">
-                *Genuine Colorbond® steel with Thermatech® solar reflectance technology.
+                *Premium Australian-grade metal with heat-reflective technology.
               </p>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                   <span className="font-semibold text-white">{roofSize} m²</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-stone-400">Colorbond Shade:</span>
+                  <span className="text-stone-400">Roof Colour:</span>
                   <span className="inline-flex items-center gap-1.5 font-semibold text-white">
                     <span
                       className="w-3 h-3 rounded-full border border-white/20"
@@ -225,7 +225,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
               </a>
 
               <div className="text-center text-[11px] text-stone-400">
-                Exact fixed price guaranteed in writing after complimentary drone/ladder inspection.
+                Exact fixed price guaranteed in writing with your free quote.
               </div>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                 Flexible Payment Options with Handypay
               </h3>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                Don’t put off urgent roof leaks or tile-to-tin conversions. Spread the cost of your roofing project with Handypay's simple, flexible payment plans. Fast digital approval and manageable weekly or fortnightly installments.
+                Don’t put off urgent roof leaks or tile-to-metal conversions. Spread the cost of your roofing project with Handypay's simple, flexible payment plans. Fast digital approval and manageable weekly or fortnightly installments.
               </p>
               <div className="pt-2 flex flex-wrap gap-3">
                 <button

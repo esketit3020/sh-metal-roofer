@@ -43,7 +43,7 @@ export default function ProjectShowcase({ onOpenQuoteModal }: ProjectShowcasePro
             <div className="space-y-3 pt-1">
               <div className="inline-flex items-center gap-2 text-xs font-semibold px-2.5 py-1 rounded bg-stone-800 text-stone-300 border border-stone-700">
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: activeProject.colourHex }}></span>
-                <span>Colorbond® {activeProject.colorbondColour}</span>
+                <span>{activeProject.roofColour}</span>
                 <span>•</span>
                 <span className="text-red-400">{activeProject.suburb}</span>
               </div>
@@ -141,7 +141,7 @@ export default function ProjectShowcase({ onOpenQuoteModal }: ProjectShowcasePro
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#C81D25] hover:bg-[#A8151D] text-white font-bold text-xs shadow-lg transition-all"
                   >
                     <Eye className="w-3.5 h-3.5" />
-                    <span>{showBefore ? 'View Finished Colorbond' : 'View Before Condition'}</span>
+                    <span>{showBefore ? 'View Finished Metal Roof' : 'View Before Condition'}</span>
                   </button>
                 )}
               </div>

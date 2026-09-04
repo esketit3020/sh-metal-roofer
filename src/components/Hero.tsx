@@ -1,5 +1,6 @@
 import { ArrowRight, Phone, ShieldCheck, Award, Wrench, CheckCircle2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/roofingData';
+import heroRoofBg from '../assets/images/drone_roof_hero_1788518443291.jpg';
 
 interface HeroProps {
   onOpenQuoteModal?: () => void;
@@ -9,12 +10,13 @@ interface HeroProps {
 export default function Hero({ onOpenReviewModal }: HeroProps) {
   return (
     <section className="relative min-h-[580px] lg:min-h-[660px] flex items-center justify-center overflow-hidden bg-stone-950">
-      {/* Background Hero Image - High-end modern metal roof home matching screenshot */}
+      {/* Background Hero Image - High-end modern metal roof townhouse matching user reference */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
-          alt="Modern architectural house with dark Colorbond metal roof in Melbourne"
+          src={heroRoofBg}
+          alt="Aerial drone view of completed multi-unit townhouse metal reroofing project in Melbourne"
           className="w-full h-full object-cover object-center"
+          referrerPolicy="no-referrer"
         />
         {/* Cinematic dark gradient overlays to match Roofrite screenshot */}
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-stone-950/70 to-stone-950/50" />
@@ -41,7 +43,7 @@ export default function Hero({ onOpenReviewModal }: HeroProps) {
             </p>
 
             <p className="text-sm sm:text-base text-stone-300 max-w-2xl leading-relaxed">
-              Specialising in premium Colorbond® metal reroofing, tile-to-tin conversions, continuous guttering, and architectural cladding. Built to withstand Melbourne’s severe four-seasons-in-one-day storms.
+              Specialising in premium metal reroofing, tile-to-metal conversions, continuous guttering, and architectural cladding. Built to withstand Melbourne’s severe four-seasons-in-one-day storms.
             </p>
 
             {/* CTAs */}
@@ -74,11 +76,11 @@ export default function Hero({ onOpenReviewModal }: HeroProps) {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
-                <span>Genuine Colorbond® Steel</span>
+                <span>Genuine Australian Steel</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
-                <span>Free On-Site Inspections</span>
+                <span>Free Quotes</span>
               </div>
             </div>
           </div>

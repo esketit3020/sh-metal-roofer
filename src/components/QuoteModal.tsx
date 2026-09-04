@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { X, CheckCircle2, Phone, Calendar, ShieldCheck, ArrowRight, Upload } from 'lucide-react';
-import { BUSINESS_INFO, COLORBOND_SWATCHES } from '../data/roofingData';
+import { BUSINESS_INFO, ROOF_COLOUR_SWATCHES } from '../data/roofingData';
 import { SafeHireLogo } from './SafeHireLogo';
 
 interface QuoteModalProps {
@@ -53,14 +53,14 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
               <CheckCircle2 className="w-10 h-10" />
             </div>
             <h3 className="text-2xl font-extrabold text-stone-900">
-              Free Inspection Request Received!
+              Free Quote Request Received!
             </h3>
             <p className="text-stone-600 text-sm max-w-md mx-auto leading-relaxed">
-              Thank you, <strong>{name}</strong>. Our licensed metal roofing specialist will review your details for <strong>{suburb}</strong> and call you back on <strong>{phone}</strong> within 2 hours to confirm your complimentary on-site inspection.
+              Thank you, <strong>{name}</strong>. Our licensed metal roofing specialist will review your details for <strong>{suburb}</strong> and call you back on <strong>{phone}</strong> within 2 hours to provide your free quote.
             </p>
             <div className="p-4 bg-stone-50 rounded-xl border border-stone-200 text-xs text-stone-600 text-left space-y-1">
               <div><strong>Service:</strong> {service}</div>
-              <div><strong>Colorbond Choice:</strong> {colour}</div>
+              <div><strong>Selected Colour:</strong> {colour}</div>
               {urgent && <div className="text-rose-600 font-bold">⚠️ Flagged as urgent active leak</div>}
             </div>
             <div className="pt-2">
@@ -78,14 +78,14 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
               <div className="flex items-center justify-between gap-4 mb-3">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wide border border-red-100">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  VBA Licensed • Free Drone &amp; Roof Inspection
+                  VBA Licensed • Free Quotes
                 </div>
                 <div className="hidden sm:block">
                   <SafeHireLogo variant="mark" theme="light" size="sm" />
                 </div>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-950">
-                Book A Free Quote &amp; Inspection
+                Request A Free Quote
               </h3>
               <p className="text-stone-600 text-xs sm:text-sm mt-1">
                 No obligation. We assess your roof, check trusses &amp; gutters, and provide a fixed written proposal.
@@ -163,7 +163,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                     className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   >
                     <option value="Reroofing (Tiles to Metal)">Reroofing (Tiles to Metal)</option>
-                    <option value="New Roof Colorbond®">New Roof Colorbond®</option>
+                    <option value="New Metal Roofs">New Metal Roofs</option>
                     <option value="Fascia and Gutters">Fascia and Gutters</option>
                     <option value="Box Gutters (Rain Heads & Sumps)">Box Gutters (Rain Heads &amp; Sumps)</option>
                     <option value="Downpipes">Downpipes</option>
@@ -176,14 +176,14 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
 
                 <div>
                   <label className="block text-xs font-bold text-stone-700 uppercase mb-1">
-                    Preferred Colorbond® Colour
+                    Preferred Roof Colour
                   </label>
                   <select
                     value={colour}
                     onChange={(e) => setColour(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   >
-                    {COLORBOND_SWATCHES.map((sw) => (
+                    {ROOF_COLOUR_SWATCHES.map((sw) => (
                       <option key={sw.name} value={sw.name}>
                         {sw.name} ({sw.category})
                       </option>

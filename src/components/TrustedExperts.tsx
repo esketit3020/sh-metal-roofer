@@ -29,7 +29,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
             </h2>
 
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              Locally owned and operated, VBA-licensed, and Colorbond® certified. Based in St. Albans, Safe Hire Metal Roofing delivers premium reroofing, tile-to-tin conversions, continuous guttering, and rectification roofing projects that Melbourne homeowners and builders rely on.
+              Locally owned and operated, VBA-licensed, and certified. Based in St. Albans, Safe Hire Metal Roofing delivers premium reroofing, tile-to-metal conversions, continuous guttering, and rectification roofing projects that Melbourne homeowners and builders rely on.
             </p>
 
             {/* 4 Checkmark Cards matching the exact layout in the screenshot */}
@@ -59,8 +59,8 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                   <Check className="w-4 h-4 stroke-[3]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">Genuine Australian Colorbond® Steel</h4>
-                  <p className="text-xs text-stone-500 mt-0.5">Only genuine Australian steel with up to 36-year manufacturer warranty.</p>
+                  <h4 className="font-bold text-stone-900 text-sm">Genuine Australian Steel Roofing</h4>
+                  <p className="text-xs text-stone-500 mt-0.5">Only high-grade Australian steel backed by comprehensive manufacturer warranties.</p>
                 </div>
               </div>
 
@@ -129,22 +129,22 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                 </div>
               </div>
 
-              {/* Tile 4: Finished pristine Colorbond roof */}
+              {/* Tile 4: Finished pristine metal roof */}
               <div className="relative rounded-xl overflow-hidden shadow-sm aspect-[4/3] group">
                 <img
                   src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
-                  alt="Completed Colorbond roof in Melbourne"
+                  alt="Completed metal roof in Melbourne"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
-                  <span className="text-white text-xs font-bold">Colorbond® Monument Finish</span>
+                  <span className="text-white text-xs font-bold">Monument Charcoal Metal Finish</span>
                 </div>
               </div>
             </div>
 
             {/* Micro accreditation footer */}
             <div className="mt-4 p-3 bg-stone-50 rounded-lg border border-stone-200 flex items-center justify-between text-xs text-stone-600">
-              <span className="font-semibold text-stone-900">Colorbond® Roofing Specialists</span>
+              <span className="font-semibold text-stone-900">Metal Roofing Specialists</span>
               <span>•</span>
               <span>VBA Licensed #104829</span>
               <span>•</span>
@@ -189,7 +189,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                   </div>
                   <div>
                     <strong className="text-stone-900">Genuine Australian Steel Only:</strong>
-                    <p className="text-xs text-stone-500">We refuse cheap imported thin-gauge tin. Every sheet we lay is genuine Colorbond® steel engineered for harsh Australian conditions.</p>
+                    <p className="text-xs text-stone-500">We refuse cheap imported materials. Every sheet we lay is premium Australian-made steel engineered for local weather conditions.</p>
                   </div>
                 </div>
 

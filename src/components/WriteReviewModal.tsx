@@ -13,7 +13,7 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
   const [hoverRating, setHoverRating] = useState(0);
   const [author, setAuthor] = useState('');
   const [location, setLocation] = useState('St Albans, VIC');
-  const [serviceType, setServiceType] = useState('Tile to Tin Conversion');
+  const [serviceType, setServiceType] = useState('Tile to Metal Conversion');
   const [text, setText] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -156,8 +156,8 @@ export default function WriteReviewModal({ isOpen, onClose, onSubmitReview }: Wr
                   onChange={(e) => setServiceType(e.target.value)}
                   className="w-full px-3 py-2 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                 >
-                  <option value="Tile to Tin Conversion">Tile to Tin Conversion</option>
-                  <option value="Colorbond Reroofing">Colorbond Reroofing</option>
+                  <option value="Tile to Metal Conversion">Tile to Metal Conversion</option>
+                  <option value="Metal Reroofing">Metal Reroofing</option>
                   <option value="Gutters & Downpipes">Gutters &amp; Downpipes</option>
                   <option value="Skylight Installation">Skylight Installation</option>
                   <option value="Emergency Leak Repair">Emergency Leak Repair</option>

@@ -16,9 +16,9 @@ export interface Project {
   id: string;
   title: string;
   suburb: string;
-  category: 'Tile-to-Tin' | 'Residential' | 'Commercial' | 'Gutters & Fascia';
+  category: 'Tile-to-Metal' | 'Residential' | 'Commercial' | 'Gutters & Fascia';
   description: string;
-  colorbondColour: string;
+  roofColour: string;
   colourHex: string;
   image: string;
   beforeImage?: string;
@@ -36,7 +36,7 @@ export interface Article {
   content: string[];
 }
 
-export interface ColorbondSwatch {
+export interface RoofColourSwatch {
   name: string;
   hex: string;
   category: 'Contemporary' | 'Classic' | 'Matt';

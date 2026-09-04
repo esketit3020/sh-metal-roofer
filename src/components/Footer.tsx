@@ -96,7 +96,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
             </div>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
-              Melbourne's leading metal roofing specialists. Providing long-lasting Colorbond® roof replacements, tile-to-tin conversions, and metal roofing to St. Albans and all Western &amp; Northern Melbourne suburbs.
+              Melbourne's leading metal roofing specialists. Providing long-lasting metal roof replacements, tile-to-metal conversions, and metal roofing to St. Albans and all Western &amp; Northern Melbourne suburbs.
             </p>
 
             <div className="space-y-1.5 text-xs text-stone-400 pt-1">
@@ -124,7 +124,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
               <li><a href="#services" className="hover:text-red-400 transition-colors">Reroofing (Tiles to Metal)</a></li>
-              <li><a href="#services" className="hover:text-red-400 transition-colors">New Roof Colorbond®</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">New Metal Roofs</a></li>
               <li><a href="#services" className="hover:text-red-400 transition-colors">Metal Battens</a></li>
               <li><a href="#services" className="hover:text-red-400 transition-colors">Insulation &amp; Sike (Sarking)</a></li>
             </ul>
@@ -165,7 +165,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
           <div className="flex items-center gap-4">
             <span>Victorian Building Authority (VBA) Certified</span>
             <span>•</span>
-            <span>Colorbond® Roofing Specialist</span>
+            <span>Metal Roofing Specialist</span>
             <span>•</span>
             <span className="text-red-400">Quality Above All</span>
           </div>

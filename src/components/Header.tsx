@@ -42,7 +42,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                     <Sparkles className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
                       <div className="text-sm font-semibold text-white">Reroofing (Tiles to Metal)</div>
-                      <div className="text-xs text-stone-400">Old tile removal, steel battens &amp; Colorbond</div>
+                      <div className="text-xs text-stone-400">Old tile removal, steel battens &amp; metal roofing</div>
                     </div>
                   </a>
                   <a
@@ -51,7 +51,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                   >
                     <Wrench className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-white">New Roof Colorbond®</div>
+                      <div className="text-sm font-semibold text-white">New Metal Roofs</div>
                       <div className="text-xs text-stone-400">Architectural steel roofing &amp; extensions</div>
                     </div>
                   </a>
@@ -62,7 +62,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                     <ShieldCheck className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
                       <div className="text-sm font-semibold text-white">Fascia &amp; Gutters</div>
-                      <div className="text-xs text-stone-400">Colorbond fascia covers &amp; quad gutters</div>
+                      <div className="text-xs text-stone-400">Protective fascia covers &amp; quad gutters</div>
                     </div>
                   </a>
                   <a
@@ -195,7 +195,7 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
                   >
-                    New Roof Colorbond®
+                    New Metal Roofs
                   </a>
                   <a
                     href="#services"

@@ -27,7 +27,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
           </h2>
 
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            Safe Hire Metal Roofing is a trusted local business in St. Albans with extensive experience in Colorbond® reroofing (tiles to metal), new roofs, fascia &amp; gutters, box gutters with rain heads &amp; sumps, downpipes, and architectural wall cladding.
+            Safe Hire Metal Roofing is a trusted local business in St. Albans with extensive experience in metal reroofing (tiles to metal), new roofs, fascia &amp; gutters, box gutters with rain heads &amp; sumps, downpipes, and architectural wall cladding.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   Domestic Specialists
                 </span>
                 <span className="text-white/80 text-xs font-mono bg-black/40 px-2 py-0.5 rounded">
-                  Tile-to-Tin &amp; Colorbond®
+                  Tile-to-Metal Specialists
                 </span>
               </div>
 
@@ -64,7 +64,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   Residential
                 </h3>
                 <p className="text-stone-300 text-sm sm:text-base line-clamp-3 leading-relaxed">
-                  Reroofing (tiles to metal), new Colorbond® roofs, fascia and gutters, high-flow downpipes, and insulation &amp; sike underlays engineered for Australian homes.
+                  Reroofing (tiles to metal), new metal roofs, fascia and gutters, high-flow downpipes, and insulation &amp; sarking underlays engineered for Australian homes.
                 </p>
                 <div className="pt-2">
                   <button
@@ -207,20 +207,20 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   Residential Metal Roofing in St. Albans &amp; Melbourne
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
-                  Australian homes face harsh UV extremes, sudden freezing hail, and torrential downpours. Our residential roofing team specialises in stripping old brittle tiles and replacing them with premium 0.42 BMT or 0.48 BMT Colorbond® steel.
+                  Australian homes face harsh UV extremes, sudden freezing hail, and torrential downpours. Our residential roofing team specialises in stripping old brittle tiles and replacing them with premium Australian-grade steel.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm">
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
                     <strong className="block text-stone-900">Reroofing (Tiles to Metal)</strong>
-                    <span className="text-xs text-stone-600">Old tile removal, steel battens &amp; lightweight Colorbond Custom Orb.</span>
+                    <span className="text-xs text-stone-600">Old tile removal, steel battens &amp; lightweight corrugated metal.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">New Roof Colorbond®</strong>
+                    <strong className="block text-stone-900">New Metal Roofs</strong>
                     <span className="text-xs text-stone-600">Complete new architectural steel roofing with precision battens.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
                     <strong className="block text-stone-900">Fascia and Gutters</strong>
-                    <span className="text-xs text-stone-600">Colorbond fascia covers and high-capacity quad/half-round gutters.</span>
+                    <span className="text-xs text-stone-600">Protective fascia covers and high-capacity quad/half-round gutters.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
                     <strong className="block text-stone-900">Downpipes &amp; Stormwater</strong>
