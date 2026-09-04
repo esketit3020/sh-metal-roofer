@@ -147,7 +147,7 @@ export default function ReviewsSection({ onOpenWriteReview, customReviews }: Rev
             { id: 'local-guide', label: 'Local Guides' },
             { id: 'Pergola', label: 'Pergola Roofing' },
             { id: 'Insulation', label: 'Leaks & Insulation' },
-            { id: 'Plumbing', label: 'Roofing & Plumbing' },
+            { id: 'Metal Roofing', label: 'Metal Roofing' },
             { id: 'Repairs', label: 'Repairs & Inspection' },
           ].map((item) => (
             <button

@@ -32,7 +32,7 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-normal text-white leading-[1.2]">
-              Melbourne’s Roof Plumbing Experts –{' '}
+              Melbourne’s Metal Roofing Experts –{' '}
               <span className="text-stone-200">Trusted in St. Albans</span>
             </h1>
 
@@ -69,11 +69,11 @@ export default function Hero({ onOpenQuoteModal, onOpenReviewModal }: HeroProps)
             <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-stone-300 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
-                <span>VBA Licensed Plumbers</span>
+                <span>VBA Licensed Metal Roofers</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />
-                <span>100% BlueScope® Steel</span>
+                <span>Genuine Colorbond® Steel</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0" />

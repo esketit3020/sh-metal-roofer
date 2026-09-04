@@ -33,36 +33,66 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
                 <ChevronDown className="w-4 h-4 text-stone-400 group-hover:text-red-500 transition-transform group-hover:rotate-180" />
               </button>
 
-              <div className="absolute top-full left-0 w-64 pt-2 hidden group-hover:block transition-all z-50">
+              <div className="absolute top-full left-0 w-72 pt-2 hidden group-hover:block transition-all z-50">
                 <div className="bg-[#181a1f] border border-stone-800 rounded-xl p-2 shadow-2xl space-y-1">
                   <a
-                    href="#tile-to-tin"
-                    className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-stone-800/80 transition-colors"
+                    href="#services"
+                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-stone-800/80 transition-colors"
                   >
                     <Sparkles className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-white">Tile to Tin Conversion</div>
-                      <div className="text-xs text-stone-400">Replace old tiles with Colorbond</div>
+                      <div className="text-sm font-semibold text-white">Reroofing (Tiles to Metal)</div>
+                      <div className="text-xs text-stone-400">Old tile removal, steel battens &amp; Colorbond</div>
                     </div>
                   </a>
                   <a
-                    href="#residential"
-                    className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-stone-800/80 transition-colors"
+                    href="#services"
+                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-stone-800/80 transition-colors"
                   >
                     <Wrench className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-white">Residential Metal Reroofs</div>
-                      <div className="text-xs text-stone-400">Corrugated &amp; standing seam</div>
+                      <div className="text-sm font-semibold text-white">New Roof Colorbond®</div>
+                      <div className="text-xs text-stone-400">Architectural steel roofing &amp; extensions</div>
                     </div>
                   </a>
                   <a
-                    href="#commercial"
-                    className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-stone-800/80 transition-colors"
+                    href="#services"
+                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-stone-800/80 transition-colors"
                   >
                     <ShieldCheck className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-white">Commercial &amp; Cladding</div>
-                      <div className="text-xs text-stone-400">Box gutters, factories &amp; wall cladding</div>
+                      <div className="text-sm font-semibold text-white">Fascia &amp; Gutters</div>
+                      <div className="text-xs text-stone-400">Colorbond fascia covers &amp; quad gutters</div>
+                    </div>
+                  </a>
+                  <a
+                    href="#services"
+                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-stone-800/80 transition-colors"
+                  >
+                    <Wrench className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-sm font-semibold text-white">Box Gutters, Rain Heads &amp; Sumps</div>
+                      <div className="text-xs text-stone-400">Custom fabrication &amp; overflow compliance</div>
+                    </div>
+                  </a>
+                  <a
+                    href="#services"
+                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-stone-800/80 transition-colors"
+                  >
+                    <Sparkles className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-sm font-semibold text-white">Downpipes</div>
+                      <div className="text-xs text-stone-400">High-capacity stormwater drainage</div>
+                    </div>
+                  </a>
+                  <a
+                    href="#services"
+                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-stone-800/80 transition-colors"
+                  >
+                    <ShieldCheck className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-sm font-semibold text-white">Wall Cladding</div>
+                      <div className="text-xs text-stone-400">Standing seam &amp; architectural facades</div>
                     </div>
                   </a>
                 </div>
@@ -152,25 +182,46 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
               {servicesDropdownOpen && (
                 <div className="pl-4 mt-1 space-y-1 border-l border-stone-700/60 ml-3">
                   <a
-                    href="#tile-to-tin"
+                    href="#services"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
                   >
-                    Tile to Tin Conversions
+                    Reroofing (Tiles to Metal)
                   </a>
                   <a
-                    href="#residential"
+                    href="#services"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
                   >
-                    Residential Metal Reroofing
+                    New Roof Colorbond®
                   </a>
                   <a
-                    href="#commercial"
+                    href="#services"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
                   >
-                    Commercial Roofing &amp; Cladding
+                    Fascia and Gutters
+                  </a>
+                  <a
+                    href="#services"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
+                  >
+                    Box Gutters (Rain Heads &amp; Sumps)
+                  </a>
+                  <a
+                    href="#services"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
+                  >
+                    Downpipes
+                  </a>
+                  <a
+                    href="#services"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md hover:bg-stone-800 text-stone-300 text-sm"
+                  >
+                    Wall Cladding
                   </a>
                 </div>
               )}

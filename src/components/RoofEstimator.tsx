@@ -156,7 +156,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                 ))}
               </div>
               <p className="text-xs text-stone-500 mt-2 italic">
-                *Genuine BlueScope® steel with Thermatech® solar reflectance technology.
+                *Genuine Colorbond® steel with Thermatech® solar reflectance technology.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function RoofEstimator({ onOpenQuoteModal }: RoofEstimatorProps) 
                   <span className="font-semibold text-red-400">3 – 5 Days</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-stone-400">BlueScope Warranty:</span>
+                  <span className="text-stone-400">Material Warranty:</span>
                   <span className="font-semibold text-white">Up to 36 Years</span>
                 </div>
               </div>

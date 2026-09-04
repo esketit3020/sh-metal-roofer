@@ -18,7 +18,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [suburb, setSuburb] = useState('St Albans');
-  const [service, setService] = useState(initialData?.service || 'Tile to Tin Conversion');
+  const [service, setService] = useState(initialData?.service || 'Reroofing (Tiles to Metal)');
   const [colour, setColour] = useState(initialData?.colour || 'Monument®');
   const [urgent, setUrgent] = useState(false);
   const [notes, setNotes] = useState('');
@@ -56,7 +56,7 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
               Free Inspection Request Received!
             </h3>
             <p className="text-stone-600 text-sm max-w-md mx-auto leading-relaxed">
-              Thank you, <strong>{name}</strong>. Our licensed roof plumber will review your details for <strong>{suburb}</strong> and call you back on <strong>{phone}</strong> within 2 hours to confirm your complimentary on-site inspection.
+              Thank you, <strong>{name}</strong>. Our licensed metal roofing specialist will review your details for <strong>{suburb}</strong> and call you back on <strong>{phone}</strong> within 2 hours to confirm your complimentary on-site inspection.
             </p>
             <div className="p-4 bg-stone-50 rounded-xl border border-stone-200 text-xs text-stone-600 text-left space-y-1">
               <div><strong>Service:</strong> {service}</div>
@@ -162,12 +162,15 @@ export default function QuoteModal({ isOpen, onClose, initialData }: QuoteModalP
                     onChange={(e) => setService(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-red-500"
                   >
-                    <option value="Tile to Tin Conversion">Tile to Tin Conversion (Colorbond)</option>
-                    <option value="Residential Metal Reroof">Residential Metal Reroof</option>
-                    <option value="Continuous Gutters & Downpipes">Continuous Gutters &amp; Downpipes</option>
-                    <option value="Skylights & Roof Plumbing">Velux Skylights &amp; Plumbing</option>
-                    <option value="Commercial Metal Roofing">Commercial &amp; Cladding</option>
-                    <option value="Emergency Storm & Leak Inspection">Emergency Storm &amp; Leak</option>
+                    <option value="Reroofing (Tiles to Metal)">Reroofing (Tiles to Metal)</option>
+                    <option value="New Roof Colorbond®">New Roof Colorbond®</option>
+                    <option value="Fascia and Gutters">Fascia and Gutters</option>
+                    <option value="Box Gutters (Rain Heads & Sumps)">Box Gutters (Rain Heads &amp; Sumps)</option>
+                    <option value="Downpipes">Downpipes</option>
+                    <option value="Wall Cladding">Wall Cladding</option>
+                    <option value="Metal Battens">Metal Battens</option>
+                    <option value="Insulation and Sike (Sarking)">Insulation and Sike (Sarking)</option>
+                    <option value="Rain Heads & Sumps">Rain Heads &amp; Sumps</option>
                   </select>
                 </div>
 

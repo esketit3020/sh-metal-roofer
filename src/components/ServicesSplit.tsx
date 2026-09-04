@@ -3,7 +3,7 @@ import { ArrowRight, Check, Home, Building2, ChevronRight, X } from 'lucide-reac
 import { SERVICES } from '../data/roofingData';
 
 interface ServicesSplitProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal: (data?: { service?: string }) => void;
 }
 
 export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) {
@@ -27,7 +27,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
           </h2>
 
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            Safe Hire Metal Roofing is a local, family-owned business in St. Albans with extensive experience in Colorbond® metal roofing, guttering, tile-to-tin conversions, skylights, and storm damage rectification.
+            Safe Hire Metal Roofing is a trusted local business in St. Albans with extensive experience in Colorbond® reroofing (tiles to metal), new roofs, fascia &amp; gutters, box gutters with rain heads &amp; sumps, downpipes, and architectural wall cladding.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   Residential
                 </h3>
                 <p className="text-stone-300 text-sm sm:text-base line-clamp-3 leading-relaxed">
-                  Expert reroofs, guttering, Velux skylights, tile-to-tin conversions, and leak repairs to protect and enhance your home with lasting BlueScope® steel.
+                  Reroofing (tiles to metal), new Colorbond® roofs, fascia and gutters, high-flow downpipes, and insulation &amp; sike underlays engineered for Australian homes.
                 </p>
                 <div className="pt-2">
                   <button
@@ -134,7 +134,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                 Our Complete Scope of Works
               </span>
               <h3 className="text-2xl font-bold text-stone-900">
-                Full Victorian Roof Plumbing Services
+                Full Victorian Metal Roofing Services
               </h3>
             </div>
             <button
@@ -173,7 +173,7 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                 </div>
 
                 <button
-                  onClick={onOpenQuoteModal}
+                  onClick={() => onOpenQuoteModal({ service: srv.title })}
                   className="w-full py-2 px-3 rounded bg-stone-100 hover:bg-[#C81D25] hover:text-white text-stone-900 text-xs font-bold transition-colors text-center"
                 >
                   Book Assessment For This Service
@@ -204,24 +204,24 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                   Residential Metal Roofing in St. Albans &amp; Melbourne
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
-                  Australian homes face harsh UV extremes, sudden freezing hail, and torrential downpours. Our residential roofing team specialises in stripping old brittle tiles and replacing them with premium 0.42 BMT or 0.48 BMT BlueScope Colorbond® steel.
+                  Australian homes face harsh UV extremes, sudden freezing hail, and torrential downpours. Our residential roofing team specialises in stripping old brittle tiles and replacing them with premium 0.42 BMT or 0.48 BMT Colorbond® steel.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm">
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Tile to Tin Conversions</strong>
-                    <span className="text-xs text-stone-600">Lightweight Colorbond Custom Orb with anti-condensation blanket.</span>
+                    <strong className="block text-stone-900">Reroofing (Tiles to Metal)</strong>
+                    <span className="text-xs text-stone-600">Old tile removal, steel battens &amp; lightweight Colorbond Custom Orb.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Continuous Gutters</strong>
-                    <span className="text-xs text-stone-600">Fascia covers, square-line &amp; quad gutters with leaf screening.</span>
+                    <strong className="block text-stone-900">New Roof Colorbond®</strong>
+                    <span className="text-xs text-stone-600">Complete new architectural steel roofing with precision battens.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Velux Skylights</strong>
-                    <span className="text-xs text-stone-600">Double glazed roof windows with bespoke watertight apron flashings.</span>
+                    <strong className="block text-stone-900">Fascia and Gutters</strong>
+                    <span className="text-xs text-stone-600">Colorbond fascia covers and high-capacity quad/half-round gutters.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Emergency Leak Repairs</strong>
-                    <span className="text-xs text-stone-600">Fast tarping and permanent roof plumbing rectification.</span>
+                    <strong className="block text-stone-900">Downpipes &amp; Stormwater</strong>
+                    <span className="text-xs text-stone-600">High-volume round and rectangular downpipes for heavy storm drainage.</span>
                   </div>
                 </div>
                 <div className="pt-4 flex gap-3">
@@ -255,20 +255,20 @@ export default function ServicesSplit({ onOpenQuoteModal }: ServicesSplitProps) 
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm">
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Klip-Lok Industrial Decking</strong>
-                    <span className="text-xs text-stone-600">Concealed-fix roofing engineered for low pitch factory applications.</span>
-                  </div>
-                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Architectural Cladding</strong>
+                    <strong className="block text-stone-900">Architectural Wall Cladding</strong>
                     <span className="text-xs text-stone-600">Interlocking panels &amp; standing seam facades for modern developments.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">Commercial Box Gutters</strong>
-                    <span className="text-xs text-stone-600">Custom welded stainless sumps &amp; overflow compliance systems.</span>
+                    <strong className="block text-stone-900">Box Gutters, Rain Heads &amp; Sumps</strong>
+                    <span className="text-xs text-stone-600">Custom welded stainless sumps, rain heads &amp; high-flow box gutters.</span>
                   </div>
                   <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
-                    <strong className="block text-stone-900">VBA Certified Work</strong>
-                    <span className="text-xs text-stone-600">Full compliance certificates and safety swms documentation.</span>
+                    <strong className="block text-stone-900">Metal Battens &amp; Reroofing</strong>
+                    <span className="text-xs text-stone-600">Heavy gauge steel battens with structural leveling and compliance.</span>
+                  </div>
+                  <div className="p-3 bg-stone-50 rounded-lg border border-stone-200">
+                    <strong className="block text-stone-900">Insulation &amp; Sike (Sarking)</strong>
+                    <span className="text-xs text-stone-600">Thermal insulation blankets and condensation vapour barriers.</span>
                   </div>
                 </div>
                 <div className="pt-4 flex gap-3">

@@ -13,7 +13,7 @@ export const BUSINESS_INFO = {
   postcode: "3021",
   rating: 4.4,
   reviewCount: 7,
-  vbaLicense: "VBA Licensed Roof Plumber #104829",
+  vbaLicense: "VBA Licensed Metal Roofer #104829",
   abn: "ABN 48 912 304 881",
   serviceRadius: "St Albans & Greater Melbourne (Western & Northern Suburbs)",
   hours: [
@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
     title: "Sunshine West – Commercial Metal Deck & Box Gutter Rectification",
     suburb: "Sunshine West",
     category: "Commercial",
-    description: "850m² commercial factory reroof using heavy-duty Klip-Lok 700 decking. Fabricated oversized stainless steel overflow sumps and commercial box gutters to meet Victorian Plumbing Code storm capacity requirements.",
+    description: "850m² commercial factory reroof using heavy-duty Klip-Lok 700 decking. Fabricated oversized stainless steel overflow sumps and commercial box gutters to meet Victorian Building & Roofing Code storm capacity requirements.",
     colorbondColour: "Woodland Grey®",
     colourHex: "#4d4e4c",
     image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80",
@@ -138,9 +138,9 @@ export const REVIEWS: Review[] = [
     rating: 5,
     date: "2 months ago",
     badge: "1 review · 2 photos",
-    text: "Very happy with the work completed by mehari. He was professional, reliable and completed the job to a high standard. I would highly recommend him to anyone needing roofing or plumbing work done.",
+    text: "Very happy with the work completed by mehari. He was professional, reliable and completed the job to a high standard. I would highly recommend him to anyone needing metal roofing work done.",
     verified: true,
-    serviceType: "Roofing & Plumbing",
+    serviceType: "Metal Roofing",
     location: "Melbourne, VIC"
   },
   {
@@ -163,11 +163,11 @@ export const ARTICLES: Article[] = [
     category: "Roof Replacement",
     readTime: "4 min read",
     date: "Updated August 2026",
-    summary: "Everything Victorian homeowners need to know about VBA structural regulations, council permits, and plumber compliance certificates when converting concrete or terracotta tiles to Colorbond.",
+    summary: "Everything Victorian homeowners need to know about VBA structural regulations, council permits, and compliance certificates when converting concrete or terracotta tiles to Colorbond.",
     image: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=800&q=80",
     content: [
       "In Victoria, converting a roof from heavy tile to lightweight metal sheeting (such as Colorbond® steel) is considered an alteration to the roof cladding. Because metal roofing significantly reduces structural dead-load (from ~60kg/m² to around 5kg/m²), it generally does not require a building permit provided the underlying trusses and rafters are inspected and verified sound.",
-      "However, any roofing plumbing works exceeding $750 in value MUST be certified by a VBA (Victorian Building Authority) licensed roof plumber with a Compliance Certificate and 6-year insurance guarantee.",
+      "However, any metal roofing works exceeding $750 in value MUST be certified by a VBA (Victorian Building Authority) licensed metal roofer with a Compliance Certificate and 6-year insurance guarantee.",
       "Safe Hire Metal Roofing handles full compliance assessments, structural tie-downs, and issues the official VBA Compliance Certificate immediately upon job completion."
     ]
   },
@@ -207,45 +207,75 @@ export const ARTICLES: Article[] = [
 
 export const SERVICES = [
   {
-    id: "tile-to-tin",
-    title: "Tile to Tin (Colorbond®) Conversion",
-    shortDesc: "Transform tired, leaking concrete or terracotta tiles into a lightweight, leak-proof Colorbond® metal roof.",
-    highlights: ["Reduces roof weight by up to 90%", "Superior storm & hail resistance", "Thermatech® solar heat reflection", "Modern architectural curb appeal"],
+    id: "reroofing-tiles-to-metal",
+    title: "Reroofing (Tiles to Metal)",
+    shortDesc: "Complete conversion of old cracked concrete or terracotta tiles into lightweight, leak-proof Colorbond® metal.",
+    highlights: [
+      "Heavy-duty metal battens installed",
+      "Thermal insulation & sike (sarking) blanket",
+      "Reduces roof deadweight by up to 90%",
+      "VBA licensed compliance certificate issued"
+    ],
     icon: "Hammer"
   },
   {
-    id: "metal-reroofing",
-    title: "Residential Metal Reroofing",
-    shortDesc: "Complete replacement of rusted corrugated iron, decramastic tiles, or outdated metal roofs.",
-    highlights: ["0.42 BMT & 0.48 BMT BlueScope® steel", "Corrugated Custom Orb & Monoclad profiles", "Full anti-condensation blanket installed", "25-36 year manufacturer warranty"],
+    id: "new-roof-colorbond",
+    title: "New Roof Colorbond®",
+    shortDesc: "Premium Colorbond® steel roofing for new homes, modern architectural builds, and extensions.",
+    highlights: [
+      "Genuine 0.42 & 0.48 BMT high-tensile steel",
+      "Precision metal batten framing & leveling",
+      "Energy-rated insulation and sike underlay",
+      "Up to 36-year manufacturer warranty"
+    ],
     icon: "Home"
   },
   {
-    id: "gutters-downpipes",
-    title: "Continuous Gutters & Downpipes",
-    shortDesc: "High-capacity Colorbond quad, half-round, and square-line gutters engineered for heavy downpours.",
-    highlights: ["Custom mitres and concealed brackets", "Over-sized 100mm downpipes for heavy flow", "Color-matched fascia covers", "Full leaf-guard mesh systems"],
+    id: "fascia-and-gutters",
+    title: "Fascia and Gutters",
+    shortDesc: "High-capacity Colorbond® quad, half-round, and squareline gutter systems paired with protective fascia covers.",
+    highlights: [
+      "Color-matched Colorbond® fascia cappings",
+      "High-volume rainwater overflow prevention",
+      "Custom leak-proof mitres and concealed clips",
+      "Full gutter mesh & leaf-guard integration"
+    ],
     icon: "Droplets"
   },
   {
-    id: "skylights-flashing",
-    title: "Skylights & Roof Plumbing",
-    shortDesc: "Velux skylight installations, parapet wall flashings, chimney cappings, and storm leak rectification.",
-    highlights: ["Custom-folded apron & counter flashings", "Double-glazed thermal Velux units", "Zero-leak precision waterproofing", "Same-day emergency tarping"],
-    icon: "Sun"
+    id: "box-gutters",
+    title: "Box Gutters (Rain Heads & Sumps)",
+    shortDesc: "Custom-folded commercial and residential box gutters engineered with custom rain heads and emergency overflow sumps.",
+    highlights: [
+      "Custom-fabricated architectural rain heads",
+      "High-capacity emergency overflow sumps",
+      "Zero internal water ponding guarantee",
+      "Victorian building regulations compliant"
+    ],
+    icon: "Wrench"
   },
   {
-    id: "commercial-cladding",
-    title: "Commercial Cladding & Factory Roofs",
-    shortDesc: "Industrial metal deck roofing, standing seam wall cladding, and commercial box gutter replacements.",
-    highlights: ["Klip-Lok concealed fixed systems", "Large-span industrial reroofs", "Full OH&S safety compliance", "Custom stainless sumps and overflow spouts"],
+    id: "downpipes",
+    title: "Downpipes",
+    shortDesc: "Heavy-duty round, square, and PVC stormwater downpipes engineered for high flow and clean stormwater connection.",
+    highlights: [
+      "Colorbond® color-matched downpipe profiles",
+      "Heavy storm drainage capacity",
+      "Secure bracket anchoring to brick & timber",
+      "Direct stormwater & charged system connection"
+    ],
+    icon: "ArrowDownCircle"
+  },
+  {
+    id: "wall-cladding",
+    title: "Wall Cladding",
+    shortDesc: "Architectural metal wall cladding and standing seam exterior facades for modern residential and commercial builds.",
+    highlights: [
+      "Standing seam, nailstrip & interlocking panels",
+      "Non-combustible fire-rated Australian steel",
+      "Thermal wall wrap & acoustic barrier",
+      "Clean concealed fixings & sharp modern lines"
+    ],
     icon: "Building2"
-  },
-  {
-    id: "roof-inspections",
-    title: "Free On-Site Roof Inspections",
-    shortDesc: "Comprehensive drone & ladder inspections with detailed photo reports and transparent fixed-price quotes.",
-    highlights: ["No-obligation written quotations", "Detailed photographic leak detection", "Structural batten soundness check", "Insurance quote assessments"],
-    icon: "ShieldCheck"
   }
 ];

@@ -17,7 +17,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
           <div className="lg:col-span-6 space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold border border-red-100">
               <ShieldCheck className="w-3.5 h-3.5 text-red-600" />
-              <span>Licensed Roof Plumber #104829</span>
+              <span>Licensed Metal Roofer #104829</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-normal text-stone-950 leading-snug">
@@ -29,7 +29,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
             </h2>
 
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              Family-owned, VBA-licensed, and BlueScope Colorbond® certified. Based in St. Albans, Safe Hire Metal Roofing delivers premium reroofing, tile-to-tin conversions, continuous guttering, and rectification roofing projects that Melbourne homeowners and builders rely on.
+              Locally owned and operated, VBA-licensed, and Colorbond® certified. Based in St. Albans, Safe Hire Metal Roofing delivers premium reroofing, tile-to-tin conversions, continuous guttering, and rectification roofing projects that Melbourne homeowners and builders rely on.
             </p>
 
             {/* 4 Checkmark Cards matching the exact layout in the screenshot */}
@@ -39,8 +39,8 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                   <Check className="w-4 h-4 stroke-[3]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">15+ Years of Family Expertise</h4>
-                  <p className="text-xs text-stone-500 mt-0.5">Generations of dedicated Australian metal roofing craftsmanship.</p>
+                  <h4 className="font-bold text-stone-900 text-sm">15+ Years of Roofing Expertise</h4>
+                  <p className="text-xs text-stone-500 mt-0.5">Over 15 years of dedicated Australian metal roofing craftsmanship.</p>
                 </div>
               </div>
 
@@ -49,7 +49,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                   <Check className="w-4 h-4 stroke-[3]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">VBA Licensed Roof Plumbers</h4>
+                  <h4 className="font-bold text-stone-900 text-sm">VBA Licensed Metal Roofers</h4>
                   <p className="text-xs text-stone-500 mt-0.5">Full compliance certificates &amp; 6-year structural guarantee.</p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                   <Check className="w-4 h-4 stroke-[3]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">100% BlueScope® &amp; Colorbond®</h4>
+                  <h4 className="font-bold text-stone-900 text-sm">Genuine Australian Colorbond® Steel</h4>
                   <p className="text-xs text-stone-500 mt-0.5">Only genuine Australian steel with up to 36-year manufacturer warranty.</p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                 </div>
                 <span className="font-extrabold text-sm text-stone-900 tracking-tight">VBA LICENSED</span>
                 <span className="text-[11px] text-stone-500 font-semibold mt-1">
-                  Victorian Building Authority Roof Plumbing
+                  Victorian Building Authority Metal Roofing
                 </span>
                 <span className="mt-2 text-[10px] font-mono px-2 py-0.5 bg-white rounded border border-stone-300 text-stone-700">
                   Lic #104829
@@ -144,9 +144,9 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
 
             {/* Micro accreditation footer */}
             <div className="mt-4 p-3 bg-stone-50 rounded-lg border border-stone-200 flex items-center justify-between text-xs text-stone-600">
-              <span className="font-semibold text-stone-900">BlueScope® Steel Partner</span>
+              <span className="font-semibold text-stone-900">Colorbond® Roofing Specialists</span>
               <span>•</span>
-              <span>Velux Certified Installer</span>
+              <span>VBA Licensed #104829</span>
               <span>•</span>
               <span className="text-red-700 font-bold">$20M Public Liability</span>
             </div>
@@ -175,11 +175,11 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
               </h3>
 
               <p className="text-stone-600 text-sm leading-relaxed">
-                Operating out of <strong>78 Perrett Ave, St Albans VIC 3021</strong>, Safe Hire Metal Roofing was founded with one clear guiding philosophy: <em>Quality Above All</em>. Where big sales franchises subcontract to unverified labourers, our licensed roof plumbers are personally on your roof from start to finish.
+                Operating out of <strong>78 Perrett Ave, St Albans VIC 3021</strong>, Safe Hire Metal Roofing was founded with one clear guiding philosophy: <em>Quality Above All</em>. Where big sales franchises subcontract to unverified labourers, our licensed metal roofing specialists are personally on your roof from start to finish.
               </p>
 
               <div className="border-l-4 border-red-600 pl-4 py-2 bg-stone-50 rounded-r-lg text-sm text-stone-700 italic">
-                “A roof is the most critical protective barrier of your home. We treat every St. Albans and Melbourne roof as if it were sheltering our own family.”
+                “A roof is the most critical protective barrier of your home. We complete every St. Albans and Melbourne project to the highest standards of durability and safety.”
               </div>
 
               <div className="space-y-3 pt-2 text-sm text-stone-700">
@@ -189,7 +189,7 @@ export default function TrustedExperts({ onOpenQuoteModal }: TrustedExpertsProps
                   </div>
                   <div>
                     <strong className="text-stone-900">Genuine Australian Steel Only:</strong>
-                    <p className="text-xs text-stone-500">We refuse cheap imported thin-gauge tin. Every sheet we lay is stamped BlueScope Colorbond® with activate® corrosion technology.</p>
+                    <p className="text-xs text-stone-500">We refuse cheap imported thin-gauge tin. Every sheet we lay is genuine Colorbond® steel engineered for harsh Australian conditions.</p>
                   </div>
                 </div>
 

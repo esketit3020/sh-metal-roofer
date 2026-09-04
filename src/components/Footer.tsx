@@ -21,7 +21,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
   };
 
   return (
-    <footer className="bg-[#0b0c0e] text-stone-300">
+    <footer id="contact" className="bg-[#0b0c0e] text-stone-300">
       {/* "Make It Happen With Us!" Full Banner matching screenshot */}
       <div className="relative py-16 lg:py-20 overflow-hidden border-b border-stone-800">
         <img
@@ -104,7 +104,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
             </div>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
-              Melbourne's leading metal roofing specialists. Providing long-lasting Colorbond® roof replacements, tile-to-tin conversions, and roof plumbing to St. Albans and all Western &amp; Northern Melbourne suburbs.
+              Melbourne's leading metal roofing specialists. Providing long-lasting Colorbond® roof replacements, tile-to-tin conversions, and metal roofing to St. Albans and all Western &amp; Northern Melbourne suburbs.
             </p>
 
             <div className="space-y-1.5 text-xs text-stone-400 pt-1">
@@ -125,33 +125,30 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
             </div>
           </div>
 
-          {/* Col 2: Residential Services */}
+          {/* Col 2: Core Roofing */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wide text-white">
-              Residential
+              Roofing Services
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
-              <li><a href="#tile-to-tin" className="hover:text-red-400 transition-colors">Tile to Tin Conversion</a></li>
-              <li><a href="#residential" className="hover:text-red-400 transition-colors">Colorbond® Reroofing</a></li>
-              <li><a href="#services" className="hover:text-red-400 transition-colors">Quad &amp; Half-Round Gutters</a></li>
-              <li><a href="#services" className="hover:text-red-400 transition-colors">Fascia Covers &amp; Downpipes</a></li>
-              <li><a href="#services" className="hover:text-red-400 transition-colors">Velux Skylights</a></li>
-              <li><a href="#services" className="hover:text-red-400 transition-colors">Emergency Leak Repair</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Reroofing (Tiles to Metal)</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">New Roof Colorbond®</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Metal Battens</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Insulation &amp; Sike (Sarking)</a></li>
             </ul>
           </div>
 
-          {/* Col 3: Commercial Services */}
+          {/* Col 3: Gutters & Drainage */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wide text-white">
-              Commercial
+              Gutters &amp; Cladding
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
-              <li><a href="#commercial" className="hover:text-red-400 transition-colors">Klip-Lok Industrial Roofing</a></li>
-              <li><a href="#commercial" className="hover:text-red-400 transition-colors">Architectural Wall Cladding</a></li>
-              <li><a href="#commercial" className="hover:text-red-400 transition-colors">Commercial Box Gutters</a></li>
-              <li><a href="#commercial" className="hover:text-red-400 transition-colors">Factory Reroofing</a></li>
-              <li><a href="#commercial" className="hover:text-red-400 transition-colors">VBA Compliance Works</a></li>
-              <li><a href="#commercial" className="hover:text-red-400 transition-colors">Strata &amp; Body Corporate</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Fascia and Gutters</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Box Gutters</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Rain Heads &amp; Sumps</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Downpipes</a></li>
+              <li><a href="#services" className="hover:text-red-400 transition-colors">Wall Cladding</a></li>
             </ul>
           </div>
 
@@ -176,7 +173,7 @@ export default function Footer({ onOpenQuoteModal }: FooterProps) {
           <div className="flex items-center gap-4">
             <span>Victorian Building Authority (VBA) Certified</span>
             <span>•</span>
-            <span>BlueScope® Steel Partner</span>
+            <span>Colorbond® Roofing Specialist</span>
             <span>•</span>
             <span className="text-red-400">Quality Above All</span>
           </div>

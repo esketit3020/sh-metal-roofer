@@ -5,7 +5,6 @@ import ServicesSplit from './components/ServicesSplit';
 import TrustedExperts from './components/TrustedExperts';
 import ProjectShowcase from './components/ProjectShowcase';
 import ReviewsSection from './components/ReviewsSection';
-import MapAndDirections from './components/MapAndDirections';
 import Footer from './components/Footer';
 import QuoteModal from './components/QuoteModal';
 import WriteReviewModal from './components/WriteReviewModal';
@@ -39,7 +38,7 @@ export default function App() {
       <Header onOpenQuoteModal={() => handleOpenQuoteWithData()} />
 
       <main className="flex-1">
-        {/* 3. Hero Section matching screenshot (Melbourne's Roof Plumbing Experts - Quality Above All) */}
+        {/* 3. Hero Section (Melbourne's Metal Roofing Experts - Quality Above All) */}
         <Hero
           onOpenQuoteModal={() => handleOpenQuoteWithData()}
           onOpenReviewModal={() => {
@@ -49,7 +48,7 @@ export default function App() {
         />
 
         {/* 4. "Quality Above All" & Split Cards (Residential & Commercial) matching screenshot */}
-        <ServicesSplit onOpenQuoteModal={() => handleOpenQuoteWithData()} />
+        <ServicesSplit onOpenQuoteModal={(data) => handleOpenQuoteWithData(data)} />
 
         {/* 5. "Trusted Roofing Experts for Over 15 Years" with checkmarks & badge grid */}
         <TrustedExperts onOpenQuoteModal={() => handleOpenQuoteWithData()} />
@@ -62,9 +61,6 @@ export default function App() {
           onOpenWriteReview={() => setWriteReviewModalOpen(true)}
           customReviews={customReviews}
         />
-
-        {/* 8. Map & Directions (78 Perrett Ave, St Albans VIC 3021) */}
-        <MapAndDirections />
       </main>
 
       {/* 9. "Make It Happen With Us!" CTA Banner, Newsletter, and Footer matching screenshot */}
